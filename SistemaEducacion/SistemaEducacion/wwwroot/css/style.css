@@ -9,9 +9,11 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-.flex-register{
-    display:flex !important;
+.container-margin{
+    margin-top:5%;
+    margin-bottom:20%;
 }
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
