@@ -31,14 +31,14 @@
     <header>
         <div class="container d-flex align-items-center">
 
-            <h1 class="logo me-auto"><a href="index.html">Educacion Fide</a></h1>
+            <h1 class="logo me-auto"><a href="@Url.Action("Index", "Home", new { area = "" })">Educacion Fide</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
             <nav id="navbar" class="navbar order-last order-lg-0">
 
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="@Url.Action("Index", "Home", new { area = "" })">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="trainers.html">Trainers</a></li>
@@ -65,25 +65,24 @@
                         </ul>
                     </li>
                     <li><a class="active" href="contact.html">Contact</a></li>
-                    <li class="nav-item">
-                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                            <partial name="_LoginPartial" />
-                        </div>
-                    </li>
+
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
+
+                <div class=" justifi navbar-expand-sm  ">
+                    <partial name="_LoginPartial" />
+                </div>
 
 
             </nav><!-- .navbar -->
 
-    
 
         </div>
     </header>
 
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
 
 
     <footer class="border-top footer text-muted">

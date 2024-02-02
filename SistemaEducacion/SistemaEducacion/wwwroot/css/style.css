@@ -9,10 +9,12 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.flex-register{
+    display:flex !important;
+}
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
-
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
 }
 
 body, html{
