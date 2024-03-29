@@ -1,0 +1,68 @@
+﻿@model SistemaEducacion.WebEntities.User
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="hold-transition login-page ">
+    <div class="card">
+        <div class="card-body login-card-body">
+            <p class="login-box-msg">Iniciar Sesión</p>
+
+            @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+            {
+                <div class="input-group mb-3">
+                    @Html.TextBoxFor(m => m.EmailUser, new
+                        {
+                            @class = "form-control",
+                            placeholder = "Correo Electrónico",
+                            @type = "Email",
+                            @required = "true"
+                        })
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-envelope"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    @Html.TextBoxFor(m => m.PasswordUser, new
+                        {
+                            @class = "form-control",
+                            placeholder = "Clave",
+                            @type = "Password",
+                            @required = "true"
+                        })
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-envelope"></span>
+                        </div>
+                    </div>
+                </div>
+
+                @if (ViewBag.MsjScreen != null)
+                {
+                    <div class="alert alert-warning" role="alert" style="text-align:center">
+                        @ViewBag.MsjScreen
+                    </div>
+                }
+
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn-block">Procesar</button>
+                    </div>
+                </div>
+
+                <div style="text-align:center; margin-top:2%">
+                    <a href="@Url.Action("RecoverAccess","Home")" class="text-center">¿Olvidaste la contraseña?</a>
+                </div>
+                <div style="text-align:center; margin-top:2%">
+                    <a href="@Url.Action("RegisterUser","Home")" class="text-center">¿No tienes una cuenta?</a>
+                </div>
+            }
+
+        </div>
+    </div>
+
+
+</div>
