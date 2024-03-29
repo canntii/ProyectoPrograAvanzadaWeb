@@ -11,6 +11,10 @@ namespace SistemaEducacion_API.Models
     public class UtilitariosModel(IConfiguration _configuration) : IUtilitariosModel
     {
         string SecretKey = _configuration.GetSection("settings:SecretKey").Value ?? string.Empty;
+
+
+
+
         public string GenerarToken(string userEmail)
         {
             List<Claim> claims = new List<Claim>();

@@ -1,6 +1,8 @@
+using Azure.Storage.Blobs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using SistemaEducacion_API;
 using SistemaEducacion_API.Models;
 using SistemaEducacion_API.Services;
 using Swashbuckle.AspNetCore.Filters;
@@ -17,6 +19,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 
 builder.Services.AddSingleton<IUtilitariosModel, UtilitariosModel>();
+builder.Services.AddSingleton<FileService>();
 
 
 builder.Services.AddSwaggerGen(options =>
