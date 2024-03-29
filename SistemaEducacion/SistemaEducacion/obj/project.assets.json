@@ -8753,23 +8753,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gblan\\.nuget\\packages\\": {},
+    "C:\\Users\\bryan\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GITHUB\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\SistemaEducacion.csproj",
+      "projectUniqueName": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\SistemaEducacion.csproj",
       "projectName": "SistemaEducacion",
-      "projectPath": "E:\\GITHUB\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\SistemaEducacion.csproj",
-      "packagesPath": "C:\\Users\\gblan\\.nuget\\packages\\",
-      "outputPath": "E:\\GITHUB\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\obj\\",
+      "projectPath": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\SistemaEducacion.csproj",
+      "packagesPath": "C:\\Users\\bryan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\gblan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8778,7 +8778,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8791,6 +8790,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -8849,7 +8853,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

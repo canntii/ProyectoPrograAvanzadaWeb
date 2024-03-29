@@ -28,17 +28,15 @@
 
 </head>
 <body>
-    <header id="header" class="fixed-top">
+    <header id="header">
         <div class="container d-flex align-items-center">
 
-            <h1 class="logo me-auto"><a href="@Url.Action("Index", "Home", new { area = "" })">Educacion Fide</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
             <nav id="navbar" class="navbar order-last order-lg-0">
 
                 <ul>
-                    <li><a href="@Url.Action("Index", "Home", new { area = "" })">Inicio</a></li>
                     <li><a href="about.html">Acerca</a></li>
                     <li><a href="courses.html">Cursos</a></li>
                     <li><a href="trainers.html">Profesores</a></li>
@@ -48,10 +46,6 @@
 
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
-
-                <div class=" justifi navbar-expand-sm  ">
-                    <partial name="_LoginPartial" />
-                </div>
 
 
             </nav><!-- .navbar -->
