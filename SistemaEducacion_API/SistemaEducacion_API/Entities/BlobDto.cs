@@ -1,4 +1,4 @@
-﻿namespace SistemaEducacion_API
+﻿namespace SistemaEducacion_API.Entities
 {
     public class BlobDto
     {

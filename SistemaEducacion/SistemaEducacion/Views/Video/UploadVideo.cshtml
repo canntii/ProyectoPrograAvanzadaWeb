@@ -1,0 +1,41 @@
+﻿@model SistemaEducacion.WebEntities.Video
+
+@{
+    ViewData["Title"] = "UploadVideo";
+}
+
+<h1>UploadVideo</h1>
+
+<h4>VideoAnswer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+
+        @using (Html.BeginForm("UploadVideo", "Video", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div>
+                @Html.LabelFor(model => model.LessonID)
+                @Html.TextBoxFor(model => model.LessonID, new { @class = "form-control", @placeholder = "Clase", @type = "number", @required = "true" })
+            </div>
+            <div>
+                @Html.LabelFor(model => model.VideoUploads)
+                @Html.TextBoxFor(model => model.VideoUploads, new { @class = "form-control", @placeholder = "Clase", @type = "file", @required = "true" })
+
+            </div>
+            <div>
+                @Html.LabelFor(model => model.MiniPictureUploads)
+                @Html.TextBoxFor(model => model.MiniPictureUploads, new { @class = "form-control", @placeholder = "Clase", @type = "file", @required = "true" })
+
+            </div>
+            <button type="submit">Subir</button>
+        }
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

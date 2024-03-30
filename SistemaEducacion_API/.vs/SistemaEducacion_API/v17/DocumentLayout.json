@@ -1,14 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion_API\\",
-
-  "Documents": [],
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
 
-      "DocumentGroups": []
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+
+        }
+      ]
     }
   ]
 }

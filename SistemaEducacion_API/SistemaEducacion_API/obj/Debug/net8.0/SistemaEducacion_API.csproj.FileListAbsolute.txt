@@ -50,3 +50,4 @@ C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEduca
 C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\obj\Debug\net8.0\SistemaEducacion_API.pdb
 C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\obj\Debug\net8.0\SistemaEducacion_API.genruntimeconfig.cache
 C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\obj\Debug\net8.0\ref\SistemaEducacion_API.dll
+
