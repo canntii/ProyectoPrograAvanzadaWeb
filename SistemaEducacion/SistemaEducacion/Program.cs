@@ -11,6 +11,9 @@ builder.Services.AddHttpClient();
 builder.Services.AddHttpContextAccessor();
 //Singleton
 builder.Services.AddSingleton<IUserModel, UserModel>();
+builder.Services.AddSingleton<ICourse, CourseModel>();
+builder.Services.AddSingleton<ILesson, LessonModel>();
+builder.Services.AddSingleton<ISuscription, SuscriptionModel>();
 builder.Services.AddSingleton<IUtilitariosModel, UtilitariosModel>();
 
 
