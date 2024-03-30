@@ -8,6 +8,7 @@
             Message = string.Empty;
             consecutive = -1;
         }
+
         public string? Code { get; set; }
         public string? Message { get; set; }
         public long consecutive { get; set; }

@@ -50,3 +50,9 @@ C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEduca
 C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\obj\Debug\net8.0\SistemaEducacion_API.pdb
 C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\obj\Debug\net8.0\SistemaEducacion_API.genruntimeconfig.cache
 C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\obj\Debug\net8.0\ref\SistemaEducacion_API.dll
+C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\bin\Debug\net8.0\Azure.Storage.Common.dll
+C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion_API\SistemaEducacion_API\bin\Debug\net8.0\System.Memory.Data.dll

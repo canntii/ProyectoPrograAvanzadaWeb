@@ -1,24 +1,28 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SistemaEducacion_API.Interfaces;
+using SistemaEducacion_API.Models;
 
 namespace SistemaEducacion_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FilesController(FileService _fileService) : ControllerBase
+    public class FilesController(IFileModel _fileModel) : ControllerBase
     {
 
         [HttpGet]
         public async Task<IActionResult> ListAllBlobs()
         {
-            var result = await _fileService.ListAsync();
+            var result = await _fileModel.ListAsync();
             return Ok(result);
         }
 
         [HttpPost]
+        [RequestFormLimits(ValueCountLimit = int.MaxValue, MultipartBodyLengthLimit = long.MaxValue)]
+        [DisableRequestSizeLimit]
         public async Task<IActionResult> Upload(IFormFile file)
         {
-            var result = await _fileService.UploadAsync(file);
+            var result = await _fileModel.UploadAsync(file);
             return Ok(result);
         }
 
@@ -26,15 +30,15 @@ namespace SistemaEducacion_API.Controllers
         [Route("filename")]
         public async Task<IActionResult> Download(string filename)
         {
-            var result = await _fileService.DownloadAsync(filename);
-            return File(result.Content, result.ContentType, result.Name);
+            var result = await _fileModel.DownloadAsync(filename);
+            return File(result!.Content!, result!.ContentType!, result.Name);
         }
 
         [HttpDelete]
         [Route("filename")]
         public async Task<IActionResult> Delete(string filename)
         {
-            var result = await _fileService.DeleteAsync(filename);
+            var result = await _fileModel.DeleteAsync(filename);
             return Ok(result);
         }
 
