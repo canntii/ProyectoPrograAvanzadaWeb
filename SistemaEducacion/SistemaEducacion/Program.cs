@@ -12,6 +12,8 @@ builder.Services.AddHttpContextAccessor();
 //Singleton
 builder.Services.AddSingleton<IUserModel, UserModel>();
 builder.Services.AddSingleton<IUtilitariosModel, UtilitariosModel>();
+builder.Services.AddSingleton<IVideoModel, VideoModel>();
+
 
 
 var app = builder.Build();

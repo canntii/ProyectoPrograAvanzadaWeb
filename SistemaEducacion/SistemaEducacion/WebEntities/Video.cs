@@ -1,6 +1,4 @@
-﻿using SistemaEducacion_API.Entity;
-
-namespace SistemaEducacion_API.Entities
+﻿namespace SistemaEducacion.WebEntities
 {
     public class Video
     {
@@ -11,7 +9,6 @@ namespace SistemaEducacion_API.Entities
         public IFormFile? VideoUploads { get; set; }
         public IFormFile? MiniPictureUploads { get; set; }
     }
-
     public class VideoAnswer
     {
         public VideoAnswer()

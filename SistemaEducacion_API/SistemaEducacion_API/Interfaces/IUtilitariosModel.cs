@@ -1,4 +1,6 @@
-﻿namespace SistemaEducacion_API.Services
+﻿using Azure.Storage.Blobs;
+
+namespace SistemaEducacion_API.Services
 {
     public interface IUtilitariosModel
     {

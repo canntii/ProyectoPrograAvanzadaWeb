@@ -1,8 +1,9 @@
 using Azure.Storage.Blobs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using SistemaEducacion_API;
+using SistemaEducacion_API.Interfaces;
 using SistemaEducacion_API.Models;
 using SistemaEducacion_API.Services;
 using Swashbuckle.AspNetCore.Filters;
@@ -11,6 +12,10 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
 string SecretKey = config["settings:SecretKey"]!.ToString();
+string AzureKey = config["settings:azureKey"]!.ToString();
+string StorageAccount = config["settings:StorageAccount"]!.ToString();
+
+
 
 // Add services to the container.
 
@@ -19,7 +24,14 @@ builder.Services.AddEndpointsApiExplorer();
 
 
 builder.Services.AddSingleton<IUtilitariosModel, UtilitariosModel>();
-builder.Services.AddSingleton<FileService>();
+builder.Services.AddSingleton<IFileModel, FileModel>();
+
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.ValueCountLimit = int.MaxValue;
+    options.MultipartBodyLengthLimit = int.MaxValue;
+    options.MultipartHeadersLengthLimit = int.MaxValue;
+});
 
 
 builder.Services.AddSwaggerGen(options =>

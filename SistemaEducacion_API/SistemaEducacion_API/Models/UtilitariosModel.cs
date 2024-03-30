@@ -13,8 +13,6 @@ namespace SistemaEducacion_API.Models
         string SecretKey = _configuration.GetSection("settings:SecretKey").Value ?? string.Empty;
 
 
-
-
         public string GenerarToken(string userEmail)
         {
             List<Claim> claims = new List<Claim>();

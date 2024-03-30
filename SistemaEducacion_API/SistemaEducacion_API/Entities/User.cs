@@ -17,6 +17,7 @@
 
     public class UserAnswer
     {
+
         public UserAnswer()
         {
             Code = "00";
@@ -28,4 +29,5 @@
         public User? Datum { get; set; }
         public List<User>? Data { get; set; }
     }
+
 }
