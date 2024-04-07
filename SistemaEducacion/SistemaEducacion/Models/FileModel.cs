@@ -1,15 +1,11 @@
 ﻿using Azure.Storage;
 using Azure.Storage.Blobs;
+using SistemaEducacion.Services;
 using Azure.Storage.Blobs.Specialized;
 using Azure.Storage.Sas;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
-using Microsoft.Extensions.Azure;
-using Microsoft.Extensions.Configuration;
-using SistemaEducacion_API.Entities;
-using SistemaEducacion_API.Interfaces;
-using System.Reflection.Metadata;
+using SistemaEducacion.WebEntities;
 
-namespace SistemaEducacion_API.Models
+namespace SistemaEducacion.Models
 {
     public class FileModel : IFileModel
     {
@@ -52,7 +48,7 @@ namespace SistemaEducacion_API.Models
 
                 Uri sasURI = blobClient.GenerateSasUri(sasBuilder);
 
-                 return sasURI;
+                return sasURI;
             }
             else
             {
@@ -79,9 +75,7 @@ namespace SistemaEducacion_API.Models
                 response.Error = false;
                 response.Blob.Uri = blobClientSAS.Uri.AbsoluteUri;
                 response.Blob.Name = client.Name;
-
             }
-
             return response;
         }
 
@@ -123,14 +117,10 @@ namespace SistemaEducacion_API.Models
             }
             return null;
         }
-
         public async Task<BlobResponseDto> DeleteAsync(string blobFileName)
         {
-
             BlobClient file = _filesContainer.GetBlobClient(blobFileName);
-
             await file.DeleteAsync();
-
             return new BlobResponseDto { Error = false, Status = $"File: {blobFileName} has been successfully deleted." };
         }
 

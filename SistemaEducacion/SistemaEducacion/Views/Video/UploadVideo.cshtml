@@ -10,7 +10,6 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-
         @using (Html.BeginForm("UploadVideo", "Video", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             <div>
@@ -19,18 +18,17 @@
             </div>
             <div>
                 @Html.LabelFor(model => model.VideoUploads)
-                @Html.TextBoxFor(model => model.VideoUploads, new { @class = "form-control", @placeholder = "Clase", @type = "file", @required = "true" })
-
+                @Html.TextBoxFor(model => model.VideoUploads, new { @class = "form-control", @type = "file", @required = "true" })
             </div>
             <div>
                 @Html.LabelFor(model => model.MiniPictureUploads)
                 @Html.TextBoxFor(model => model.MiniPictureUploads, new { @class = "form-control", @placeholder = "Clase", @type = "file", @required = "true" })
-
             </div>
             <button type="submit">Subir</button>
         }
     </div>
 </div>
+
 
 <div>
     <a asp-action="Index">Back to List</a>

@@ -7,7 +7,6 @@ namespace SistemaEducacion.Models
 {
     public class UserModel(HttpClient _httpClient, IConfiguration _configuration) : IUserModel
     {
-
         public Answer? RegisterUser(User entity)
         {
             string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/User/RegisterUser";
@@ -53,8 +52,6 @@ namespace SistemaEducacion.Models
             if (resp.IsSuccessStatusCode)
                 return resp.Content.ReadFromJsonAsync<UserAnswer>().Result;
             return null;
-        }
-
-        
+        } 
     }
 }

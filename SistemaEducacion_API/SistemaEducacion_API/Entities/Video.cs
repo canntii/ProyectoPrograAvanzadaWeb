@@ -8,8 +8,6 @@ namespace SistemaEducacion_API.Entities
         public string? VideoUrl { get; set; }
         public string? MiniPictureUrl { get; set; }
         public int LessonID { get; set; }
-        public IFormFile? VideoUploads { get; set; }
-        public IFormFile? MiniPictureUploads { get; set; }
     }
 
     public class VideoAnswer
