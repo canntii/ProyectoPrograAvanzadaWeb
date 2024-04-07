@@ -15,7 +15,6 @@ namespace SistemaEducacion_API.Controllers
     [ApiController]
     public class VideoController(IConfiguration _configuration, IFileModel _fileModel) : ControllerBase
     {
-
         [HttpPost]
         [Route("UploadVideo")]
         public IActionResult UploadVideo(Video entity)
@@ -51,7 +50,6 @@ namespace SistemaEducacion_API.Controllers
                     answer.Message = "Se insertó exitosamente";
                     answer.Datum = result;
                 }
-
                 return Ok(answer);
             }
         }
