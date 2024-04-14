@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SistemaEducacion.WebEntities.User>
+@{
+    ViewData["Title"] = "Lecciones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1>Título del curso</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Nombre del profesor</h2>
+            <p>Fecha de inicio: 01 de Enero de 2024</p>
+            <p>Fecha de cierre: 31 de Diciembre de 2024</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h3>Lecciones</h3>
+            <ul class="list-group justify-content-between">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Lección 1: Título de la lección 1</span>
+                    <a href="#" class="btn btn-success">Iniciar lección</a>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Lección 2: Título de la lección 2</span>
+                    <a href="#" class="btn btn-success">Iniciar lección</a>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>Lección 3: Título de la lección 3</span>
+                    <a href="#" class="btn btn-success">Iniciar lección</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

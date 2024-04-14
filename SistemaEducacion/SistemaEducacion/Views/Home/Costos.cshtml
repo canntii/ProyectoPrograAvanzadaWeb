@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SistemaEducacion.WebEntities.User>
+@{
+    ViewData["Title"] = "Costos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center mb-4" style="margin-top:50px">Costos:</h1>
+<h5 class="text-center mb-100">Escoge entre nuestros planes el que se adapte mejor a tus necesidades:</h5>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 mb-2">
+            <div class="card">
+                <div class="card-body text-center p-4">
+                    <h2 class="card-title">Gratis</h2>
+                    <h3 class="card-text">₡0/mes</h3>
+                    <p class="card-text">Acceso solo al contenido marcado como gratuito</p>
+                    <a href="DetallesCurso.html" class="btn btn-success">Suscribirse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-2">
+            <div class="card">
+                <div class="card-body text-center p-4">
+                    <h2 class="card-title">Regular</h2>
+                    <h3 class="card-text">₡2500/mes</h3>
+                    <p class="card-text">Acceso a la gran mayoría de contenido solo una vez por lección</p>
+                    <a href="DetallesCurso.html" class="btn btn-success">Suscribirse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-2">
+            <div class="card">
+                <div class="card-body text-center p-4">
+                    <h2 class="card-title">Premium</h2>
+                    <h3 class="card-text">₡7500/mes</h3>
+                    <p class="card-text">Acceso a todo el contenido solo una vez por lección</p>
+                    <a href="DetallesCurso.html" class="btn btn-success">Suscribirse</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-2">
+            <div class="card">
+                <div class="card-body text-center p-4">
+                    <h2 class="card-title">Premium Extra</h2>
+                    <h3 class="card-text">₡9000/mes</h3>
+                    <p class="card-text">Acceso a todo el contenido de manera totalmente ilimitada</p>
+                    <a href="DetallesCurso.html" class="btn btn-success">Suscribirse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
