@@ -1,0 +1,34 @@
+﻿@model SistemaEducacion.WebEntities.User
+@{
+    ViewData["Title"] = "Videos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1 class="mt-4 mb-4">Videos</h1>
+    <form>
+
+        <div id="videos">
+            <div class="form-group video">
+                <label for="video1">URL Video 1</label>
+                <input type="text" class="form-control" id="video1" name="video1">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary mt-2" id="agregarVideo">Agregar otra lección</button>
+        <button type="submit" class="btn btn-success mt-2">Guardar</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var contador = 1;
+
+        $("#agregarVideo").click(function () {
+            contador++;
+            var nuevoVideo = '<div class="mb-4"></div><div class="form-group video"><label for="video' + contador + '">URL Video ' + contador + '</label><input type="text" class="form-control" id="video' + contador + '" name="video' + contador + '"></div>';
+            $("#videos").append(nuevoVideo);
+        });
+    });
+</script>

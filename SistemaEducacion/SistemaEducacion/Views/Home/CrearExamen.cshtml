@@ -1,0 +1,54 @@
+﻿@model SistemaEducacion.WebEntities.User
+@{
+    ViewData["Title"] = "CrearExamen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1 class="mt-4 mb-4">Crear Examen</h1>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-4 mb-2">
+                <label for="fechaInicio">Fecha de Inicio</label>
+                <input type="date" class="form-control" id="fechaInicio" name="fechaInicio">
+            </div>
+            <div class="form-group col-md-4 mb-2">
+                <label for="fechaFin">Fecha de Fin</label>
+                <input type="date" class="form-control" id="fechaFin" name="fechaFin">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="notaMinima">Nota Mínima</label>
+                <input type="number" class="form-control" id="notaMinima" name="notaMinima">
+            </div>
+        </div>
+
+        <div class="mb-4"></div>
+
+        <div id="preguntas">
+            <div class="form-group pregunta">
+                <label for="pregunta1">Pregunta 1</label>
+                <input type="text" class="form-control" id="pregunta1" name="pregunta1">
+            </div>
+            <div class="form-group respuesta">
+                <label for="respuesta1">Respuesta 1</label>
+                <input type="text" class="form-control" id="respuesta1" name="respuesta1">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary mt-2" id="agregarPregunta">Agregar otra pregunta</button>
+        <button type="submit" class="btn btn-success mt-2">Crear Examen</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var contador = 1;
+
+        $("#agregarPregunta").click(function () {
+            contador++;
+            var nuevaPregunta = '<div class="mb-4"></div><div class="form-group pregunta"><label for="pregunta' + contador + '">Pregunta ' + contador + '</label><input type="text" class="form-control" id="pregunta' + contador + '" name="pregunta' + contador + '"></div><div class="form-group respuesta"><label for="respuesta' + contador + '">Respuesta ' + contador + '</label><input type="text" class="form-control" id="respuesta' + contador + '" name="respuesta' + contador + '"></div>';
+            $("#preguntas").append(nuevaPregunta);
+        });
+    });
+</script>
