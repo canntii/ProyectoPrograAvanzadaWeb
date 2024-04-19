@@ -1,8 +1,10 @@
-﻿namespace SistemaEducacion_API.Entity
+﻿using SistemaEducacion_API.Entities;
+
+namespace SistemaEducacion_API.Entity
 {
     public class User
     {
-        public int UserId { get; set; }
+        public int UserID { get; set; }
         public string? FirstNameUser { get; set; }
         public string? LastNameUser { get; set; }
         public string? EmailUser { get; set; }

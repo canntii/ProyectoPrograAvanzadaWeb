@@ -20,8 +20,8 @@ namespace SistemaEducacion_API.Controllers
                 Answer answer = new Answer();
                 var result = db.Execute("RegisterSuscription", new
                 {
-                    Type = entity.SubscriptionType,
-                    Price = entity.SubscriptionPrice
+                    entity.SubscriptionType,
+                    entity.SubscriptionPrice
                 }, commandType: CommandType.StoredProcedure);
 
                 if (result <= 0)
@@ -47,21 +47,21 @@ namespace SistemaEducacion_API.Controllers
                 Answer answer = new Answer();
                 var result = db.Execute("UpdateSuscription", new
                 {
-                    Id = entity.SubscriptionID,
-                    Type = entity.SubscriptionType,
-                    Price = entity.SubscriptionPrice,
-                    Estado = entity.Estado
+                    entity.SubscriptionID,
+                    entity.SubscriptionType,
+                    entity.SubscriptionPrice,
+                    entity.Estado
                 }, commandType: CommandType.StoredProcedure);
 
                 if (result <= 0)
                 {
                     answer.Code = "-1";
-                    answer.Message = "Ha ocurrido un error que imposibilita actualizar la subscripcion..";
+                    answer.Message = "Ha ocurrido un error que imposibilita actualizar la subscripción..";
                 }
                 else
                 {
                     answer.Code = "1";
-                    answer.Message = "Se realizo la actualizacion de la subscripcion correctamente.";
+                    answer.Message = "Se realizo la actualización de la subscripción correctamente.";
                 }
                 return Ok(answer);
             }
@@ -82,12 +82,12 @@ namespace SistemaEducacion_API.Controllers
                 if (result <= 0)
                 {
                     answer.Code = "-1";
-                    answer.Message = "Ha ocurrido un error que imposibilita eliminar la subscripcion..";
+                    answer.Message = "Ha ocurrido un error que imposibilita eliminar la subscripción...";
                 }
                 else
                 {
                     answer.Code = "1";
-                    answer.Message = "Se realizo la eliminacion de la subscripcion correctamente.";
+                    answer.Message = "Se realizo la eliminación de la subscripción correctamente.";
                 }
                 return Ok(answer);
             }
