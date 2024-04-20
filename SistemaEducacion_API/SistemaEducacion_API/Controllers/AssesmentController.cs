@@ -76,5 +76,26 @@ namespace SistemaEducacion_API.Controllers
                 return Ok(answer) ;
             }
         }
+
+        [HttpPut]
+        [Route("DeleteAssesment")]
+        public IActionResult DeleteAssesment(int id)
+        {
+            using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                AssesmentAnswer answer = new AssesmentAnswer();
+
+                var result = db.Execute("DeleteAssesment",
+                    new { id },
+                    commandType: CommandType.StoredProcedure);
+
+                if (result <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No hay exámenes aún...";
+                }
+                return Ok(answer);
+            }
+        }
     }
 }

@@ -19,7 +19,6 @@ namespace SistemaEducacion_API.Entities
             Message = string.Empty;
 
         }
-
         public string? Code { get; set; }
         public string? Message { get; set; }
         public Assesment? Datum { get; set; }
