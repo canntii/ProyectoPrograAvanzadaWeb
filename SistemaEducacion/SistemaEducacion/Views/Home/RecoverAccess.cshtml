@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="hold-transition login-page">
+@*<div class="hold-transition login-page">
     <div class="login-box">
 
         <div class="card">
@@ -43,6 +43,50 @@
                     <a href="@Url.Action("RegisterUser","Home")" class="text-center">¿No tienes una cuenta?</a>
                 </div>
 
+            </div>
+        </div>
+    </div>
+</div>*@
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+
+                    <div class="mb-md-2 mt-md-4 pb-5">
+
+                        <h2 class="fw-bold mb-2 text-uppercase">Recuperar Acceso</h2>
+                            
+                        <p class="text-white-50 mb-5">Por favor ingrese su correo electrónico</p>
+
+                        @using (Html.BeginForm("RecoverAccess", "Home", FormMethod.Post))
+                        {
+                            <div class="form-outline form-white mb-4">
+                                @Html.TextBoxFor(m => m.EmailUser, new { @class = "form-control form-control-lg", @placeholder = "Correo Electrónico", @type = "Email", @required = "true" })
+                            </div>
+
+                            @if (ViewBag.MsjScreen != null)
+                            {
+                                <div class="alert alert-warning" role="alert" style="text-align:center">
+                                    @ViewBag.MsjScreen
+                                </div>
+                            }
+
+                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Ingresar</button>
+                        }
+
+                    </div>
+
+                    <div>
+                        <p class="small mb-2 pb-lg-2">
+                                <a class="text-white-50" href="@Url.Action("Login","Home")">¿Ya tienes una cuenta?</a>
+                            </p>
+                        <p class="mb-0">
+                            ¿No tienes una cuenta? <a href="@Url.Action("RegisterUser","Home")" class="text-white-50 fw-bold">Regístrese</a>
+                        </p>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
