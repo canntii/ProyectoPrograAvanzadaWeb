@@ -6,6 +6,7 @@ using SistemaEducacion_API.Services;
 using SistemaEducacion_API.Entity;
 using System.Data;
 using System.Data.SqlClient;
+using static Dapper.SqlMapper;
 
 namespace SistemaEducacion_API.Controllers
 {
@@ -129,6 +130,64 @@ namespace SistemaEducacion_API.Controllers
                 return Ok(answer);
             }
         }
+
+        [HttpPut]
+        [Route("BecomeProfessor")]
+        public IActionResult BecomeProfessor(int UserID)
+        {
+            //int UserID = int.Parse(_utilitariosModel.Decrypt(User.Identity!.Name!));  --> esto se utilizará cuando el web esté levantado, de momento se pasa id por parámetro para pruebas
+
+            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                UserAnswer answer = new UserAnswer();
   
+                var result = db.Execute("BecomeProfessor",
+                new { UserID },
+                commandType: CommandType.StoredProcedure);
+
+                if (result <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No existe ningún profesor asociado";
+                }
+                else
+                {
+                    answer.Code = "0";
+                    answer.Message = "Solicitud enviada con éxito";
+                }
+
+                return Ok(answer);
+            }
+        }
+
+        [HttpPut]
+        [Route("AcceptOrRejectProfessor")]
+        public IActionResult AcceptOrRejectProfessor(int UserID, int AcceptOrReject) // 0 igual a rechazado // 3 igual a aprobado
+        {
+            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                UserAnswer answer = new UserAnswer();
+                //int UserID = int.Parse(_utilitariosModel.Decrypt(User.Identity!.Name!));  --> esto se utilizará cuando el web esté levantado, de momento se pasa id por parámetro para pruebas
+                var result = db.Execute("AcceptOrRejectProfessor",
+                new { UserID, AcceptOrReject },
+                commandType: CommandType.StoredProcedure);
+
+                if (result <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No existe ningún profesor asociado";
+                }
+                else
+                {
+                    answer.Code = "0";
+                    answer.Message = "Solicitud enviada con éxito";
+                }
+
+                return Ok(answer);
+            }
+        }
+
+
+
     }
 }
