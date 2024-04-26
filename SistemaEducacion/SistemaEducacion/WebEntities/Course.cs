@@ -1,16 +1,15 @@
-﻿using SistemaEducacion_API.Entity;
-
-namespace SistemaEducacion_API.Entities
+﻿namespace SistemaEducacion.WebEntities
 {
     public class Course
     {
-        public int CourseID { get; set; }
+        public long CourseID { get; set; }
         public string? CourseTitle { get; set; }
         public string? CourseDescription { get; set; }
         public bool Estado { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string? PictureUrl { get; set; }
+        public IFormFile? PictureUploads { get; set; }
         public string? LessonDescription { get; set; }
         public string? VideoUrl { get; set; }
         public string? MiniPictureUrl { get; set; }

@@ -1,0 +1,48 @@
+﻿@model SistemaEducacion.WebEntities.Course
+
+@{
+    ViewData["Title"] = "AddCourse";
+}
+
+<h1>Crear Curso</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("AddCourse", "Course", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div>
+                @Html.LabelFor(model => model.CourseTitle)
+                @Html.TextBoxFor(model => model.CourseTitle, new { @class = "form-control", @placeholder = "Clase", @type = "text", @required = "true" })
+            </div>
+            <div>
+                @Html.LabelFor(model => model.CourseDescription)
+                @Html.TextBoxFor(model => model.CourseDescription, new { @class = "form-control", @placeholder = "Clase", @type = "text", @required = "true" })
+            </div>
+            <div>
+                @Html.LabelFor(model => model.StartDate)
+                @Html.TextBoxFor(model => model.StartDate, new { @class = "form-control", @type = "date", @required = "true" })
+            </div>
+            <div>
+                @Html.LabelFor(model => model.EndDate)
+                @Html.TextBoxFor(model => model.EndDate, new { @class = "form-control", @type = "date", @required = "true" })
+            </div>
+            <div>
+                @Html.LabelFor(model => model.PictureUploads)
+                @Html.TextBoxFor(model => model.PictureUploads, new { @class = "form-control", @placeholder = "Clase", @type = "file", @required = "true" })
+            </div>
+            <button type="submit">Subir</button>
+        }
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

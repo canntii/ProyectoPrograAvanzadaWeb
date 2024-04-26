@@ -1,0 +1,32 @@
+﻿@model SistemaEducacion.WebEntities.User
+
+@{
+    ViewData["Title"] = "BecomeProfessor";
+}
+
+<h1>Quieres hacerte profesor?</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("BecomeProfessor", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div>
+                @Html.LabelFor(model => model.PictureUploads)
+                @Html.TextBoxFor(model => model.PictureUploads, new { @class = "form-control", @placeholder = "Sube tu foto", @type = "file", @required = "true" })
+            </div>
+            <button type="submit">Subir</button>
+        }
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

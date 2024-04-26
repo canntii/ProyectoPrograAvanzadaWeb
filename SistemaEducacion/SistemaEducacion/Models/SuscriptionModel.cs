@@ -1,11 +1,11 @@
-﻿using SistemaEducacion.Entities;
-using SistemaEducacion.Services;
+﻿using SistemaEducacion.Services;
+using SistemaEducacion.WebEntities;
 
 namespace SistemaEducacion.Models
 {
     public class SuscriptionModel(IConfiguration _config, HttpClient _httpClient) : ISuscription
     {
-        public Answer AddSuscription(Suscription entity)
+        public Answer? AddSuscription(Suscription entity)
         {
             string url = _config.GetSection("settings:UrlWebApi").Value + "api/Suscription/AddSuscription";
             JsonContent body = JsonContent.Create(entity);
@@ -19,7 +19,7 @@ namespace SistemaEducacion.Models
             return null;
         }
 
-        public Answer UpdateSuscription(Suscription entity)
+        public Answer? UpdateSuscription(Suscription entity)
         {
             string url = _config.GetSection("settings:UrlWebApi").Value + "api/Suscription/UpdateSubscription";
             JsonContent body = JsonContent.Create(entity);

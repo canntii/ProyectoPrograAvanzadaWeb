@@ -16,6 +16,7 @@ namespace SistemaEducacion_API.Entity
         public bool Temporary { get; set; }
         public string? TemporalPassword { get; set; }
         public int IsTeacher { get; set; } //1 Usuario normal //2 En proceso de aprobacion //3 Teacher
+        public string? PictureUrl { get; set; }
     }
 
     public class UserAnswer

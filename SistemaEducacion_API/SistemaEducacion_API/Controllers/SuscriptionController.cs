@@ -67,16 +67,16 @@ namespace SistemaEducacion_API.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpPut]
         [Route("DeleteSuscription")]
-        public IActionResult DeleteSubscription(long id)
+        public IActionResult DeleteSubscription(long ID)
         {
             using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
             {
                 Answer answer = new Answer();
                 var result = db.Execute("DeleteSuscription", new
                 {
-                    ID = id
+                    ID
                 }, commandType: CommandType.StoredProcedure);
 
                 if (result <= 0)

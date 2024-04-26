@@ -90,5 +90,33 @@ namespace SistemaEducacion_API.Controllers
                 return Ok(answer);
             }
         }
+
+
+        [HttpGet]
+        [Route("DeleteQuestion")]
+        public IActionResult DeleteQuestion(int AssesmentID)
+        {
+            using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                QuestionAnswer answer = new QuestionAnswer();
+
+                var result = db.Execute("DeleteQuestion",
+                    new { AssesmentID },
+                    commandType: CommandType.StoredProcedure);
+
+                if (result <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No hay preguntas...";
+                }
+                else
+                {
+                    answer.Code = "-1";
+                    answer.Message = "Resultado exitoso";
+                }
+
+                return Ok(answer);
+            }
+        }
     }
 }

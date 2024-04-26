@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 using SistemaEducacion.WebEntities;
 using SistemaEducacion.Services;
+using Microsoft.EntityFrameworkCore;
+using System.Net.Http.Headers;
 
 
 namespace SistemaEducacion.Models
 {
-    public class UserModel(HttpClient _httpClient, IConfiguration _configuration) : IUserModel
+    public class UserModel(HttpClient _httpClient, IConfiguration _configuration, IHttpContextAccessor _context) : IUserModel
     {
         public Answer? RegisterUser(User entity)
         {
@@ -52,6 +54,66 @@ namespace SistemaEducacion.Models
             if (resp.IsSuccessStatusCode)
                 return resp.Content.ReadFromJsonAsync<UserAnswer>().Result;
             return null;
-        } 
+        }
+
+        public UserAnswer? BecomeProfessor(User entity)
+        {
+            string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/User/BecomeProfessor";
+
+            string token = _context.HttpContext?.Session.GetString("Token")!;
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            JsonContent body = JsonContent.Create(entity);
+            var resp = _httpClient.PutAsync(url, body).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<UserAnswer>().Result;
+            return null;
+        }
+
+        public UserAnswer? AcceptOrRejectProfessor(User entity)
+        {
+            string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/User/AcceptOrRejectProfessor";
+            string token = _context.HttpContext?.Session.GetString("Token")!;
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            JsonContent body = JsonContent.Create(entity);
+            var resp = _httpClient.PutAsync(url, body).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<UserAnswer>().Result;
+            return null;
+        }
+
+        public UserAnswer? ViewProfessorApplicants()
+        {
+            string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/User/ViewProfessorApplicants";
+
+            string token = _context.HttpContext?.Session.GetString("Token")!;
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var resp = _httpClient.GetAsync(url).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<UserAnswer>().Result;
+
+            return null;
+        }
+
+        public UserAnswer? SeeProfesorCourse(int CourseID)
+        {
+            string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/User/SeeProfesorCourse" + "/" + CourseID;
+
+            string token = _context.HttpContext?.Session.GetString("Token")!;
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var resp = _httpClient.GetAsync(url).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<UserAnswer>().Result;
+
+            return null;
+        }
+
     }
 }

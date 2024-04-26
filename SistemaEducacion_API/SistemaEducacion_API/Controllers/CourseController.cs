@@ -25,7 +25,8 @@ namespace SistemaEducacion_API.Controllers
                     entity.CourseTitle,
                     entity.CourseDescription,
                     entity.StartDate,
-                    entity.EndDate
+                    entity.EndDate,
+                    entity.PictureUrl
                 }, commandType: CommandType.StoredProcedure);
 
                 if (result <= 0)
@@ -68,6 +69,31 @@ namespace SistemaEducacion_API.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("SeeLessonCourse/{CourseID}")]
+        public IActionResult SeeLessonCourse(int CourseID)
+        {
+            using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                CourseAnswer answer = new CourseAnswer();
+
+                var result = db.Query<Course>("SeeLessonCourse", new { CourseID }
+                    , commandType: CommandType.StoredProcedure).ToList();
+
+                if (result.Count <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No hay cursos...";
+                }
+                else
+                {
+                    answer.Data = result;
+                }
+
+                return Ok(answer);
+            }
+        }
+
         [HttpPut]
         [Route("UpdateCourse")]
         public IActionResult UpdateCourse(Course entity)
@@ -82,7 +108,8 @@ namespace SistemaEducacion_API.Controllers
                     entity.CourseTitle,
                     entity.CourseDescription,
                     entity.StartDate,
-                    entity.EndDate
+                    entity.EndDate,
+                    entity.PictureUrl
                 },
                 commandType: CommandType.StoredProcedure);
 
