@@ -16,7 +16,7 @@ namespace SistemaEducacion.Controllers
         {
             var resp = _courseModel.SeeLessonCourse(CourseID);
             var prof = _userModel.SeeProfesorCourse(CourseID);
-            string profesor = prof.Datum.FirstNameUser + " " + prof.Datum.LastNameUser;
+            string profesor = prof?.Datum?.FirstNameUser + " " + prof?.Datum?.LastNameUser;
             if (resp?.Code == "00")
             {
                 ViewBag.Profesor = profesor;

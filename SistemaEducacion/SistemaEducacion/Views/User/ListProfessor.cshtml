@@ -1,0 +1,35 @@
+﻿@model List<SistemaEducacion.WebEntities.User>
+
+<div id="main" data-aos="fade-in">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs mt-0">
+        <div class="container">
+            <h2>Nuestros Profesores</h2>
+            <p>Contamos con una amplia gama de profesionales</p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Trainers Section ======= -->
+    <section id="trainers" class="trainers">
+
+        <div class="container" data-aos="fade-up">
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                            <img src="@item.PictureUrl" class="img-fluid" alt="" style="width:100%; height:60%; max-width:100%; max-height:60%; ">
+                        <div class="member-content">
+                            <h4>@item.FirstNameUser @item.LastNameUser</h4>
+                            <p>
+                                @item.EmailUser
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+            </div>
+        </div>
+    </section>
+</div><!-- End #main -->

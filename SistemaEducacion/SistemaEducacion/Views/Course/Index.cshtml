@@ -18,19 +18,17 @@
     <!-- ======= Courses Section ======= -->
     <section id="courses" class="courses">
         <div class="container" data-aos="fade-up">
-
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
                 @foreach (var item in Model)
                 {
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                         <div class="course-item">
-                            <video src="@item.PictureUrl" class="img-fluid" alt="..." type="video/mp4">
+                            <img src="@item.PictureUrl" class="img-fluid" alt="...">
                             <div class="course-content">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <h4>Curso #@item.CourseID</h4>
                                     <p class="price">$250</p>
                                 </div>
-
                                 <h3><a href="course-details.html">@item.CourseTitle</a></h3>
                                 <p>@item.CourseDescription</p>
                             </div>
@@ -38,5 +36,4 @@
                     </div> <!-- End Course Item-->
                 }
     </section><!-- End Courses Section -->
-
 </main><!-- End #main -->

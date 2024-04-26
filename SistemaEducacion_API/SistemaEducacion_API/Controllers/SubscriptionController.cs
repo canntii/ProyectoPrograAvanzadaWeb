@@ -9,11 +9,11 @@ namespace SistemaEducacion_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SuscriptionController(IConfiguration _config) : ControllerBase
+    public class SubscriptionController(IConfiguration _config) : ControllerBase
     {
         [HttpPost]
         [Route("AddSuscription")]
-        public IActionResult AddSuscription(Suscription entity)
+        public IActionResult AddSuscription(Subscription entity)
         {
             using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
             {
@@ -40,7 +40,7 @@ namespace SistemaEducacion_API.Controllers
 
         [HttpPut]
         [Route("UpdateSubscription")]
-        public IActionResult UpdateSuscription(Suscription entity)
+        public IActionResult UpdateSuscription(Subscription entity)
         {
             using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
             {
@@ -99,9 +99,9 @@ namespace SistemaEducacion_API.Controllers
         {
             using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
             {
-                SuscriptionAnswer answer = new SuscriptionAnswer();
+                SubscriptionAnswer answer = new SubscriptionAnswer();
 
-                var result = db.Query<Suscription>("ListSuscriptions", commandType: CommandType.StoredProcedure).ToList();
+                var result = db.Query<Subscription>("ListSuscriptions", commandType: CommandType.StoredProcedure).ToList();
 
                 if (result == null)
                 {
@@ -110,8 +110,6 @@ namespace SistemaEducacion_API.Controllers
                 }
                 else
                 {
-                    answer.Code = "1";
-                    answer.Message = "Se han conseguido resultados";
                     answer.data = result;
                 }
 

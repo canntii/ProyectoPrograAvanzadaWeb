@@ -17,7 +17,7 @@ namespace SistemaEducacion_API.Controllers
     {
         [AllowAnonymous]
         [HttpPost]
-        [Route("Login")] 
+        [Route("Login")]
         public IActionResult Login(User entity)
         {
             using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
@@ -54,10 +54,10 @@ namespace SistemaEducacion_API.Controllers
                 Answer answer = new Answer();
 
                 var result = db.Execute("RegisterUser",
-                    new { entity.FirstNameUser, entity.LastNameUser, entity.EmailUser, entity.PasswordUser},
+                    new { entity.FirstNameUser, entity.LastNameUser, entity.EmailUser, entity.PasswordUser },
                     commandType: CommandType.StoredProcedure);
 
-                if(result <= 0)
+                if (result <= 0)
                 {
                     answer.Code = "-1";
                     answer.Message = "Su correo ya se encuentra registrado";
@@ -82,10 +82,10 @@ namespace SistemaEducacion_API.Controllers
                 var result = db.Query<User>("RecoverAccess",
                     new { entity.EmailUser, PasswordUser, Temporary },
                     commandType: CommandType.StoredProcedure).FirstOrDefault();
-                    
-                if(result == null)
+
+                if (result == null)
                 {
-                    answer.Code="-1";
+                    answer.Code = "-1";
                     answer.Message = "Sus datos no son correctos";
                 }
                 else
@@ -110,14 +110,14 @@ namespace SistemaEducacion_API.Controllers
         {
             using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
-                UserAnswer answer = new UserAnswer(); 
+                UserAnswer answer = new UserAnswer();
                 bool Temporary = false;
 
                 var result = db.Query<User>("ChangePassword",
                     new { entity.EmailUser, entity.PasswordUser, entity.TemporalPassword, Temporary },
                     commandType: CommandType.StoredProcedure).FirstOrDefault();
 
-                if(result == null)
+                if (result == null)
                 {
                     answer.Code = "-1";
                     answer.Message = "Sus datos no son correctos";
@@ -142,7 +142,7 @@ namespace SistemaEducacion_API.Controllers
             using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
                 UserAnswer answer = new UserAnswer();
-  
+
                 var result = db.Execute("BecomeProfessor",
                 new { UserID, entity.PictureUrl },
                 commandType: CommandType.StoredProcedure);
@@ -232,6 +232,30 @@ namespace SistemaEducacion_API.Controllers
                     answer.Datum = result;
                 }
 
+                return Ok(answer);
+            }
+        }
+
+        [HttpGet]
+        [Route("ListProfessor")]
+        public IActionResult ListProfessor()
+        {
+            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                UserAnswer answer = new UserAnswer();
+
+                var result = db.Query<User>("ListProfessor"
+                    , commandType: CommandType.StoredProcedure).ToList();
+
+                if (result == null)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No hay ningún profesor...";
+                }
+                else
+                {
+                    answer.Data = result;
+                }
                 return Ok(answer);
             }
         }

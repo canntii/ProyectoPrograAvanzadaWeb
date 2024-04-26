@@ -1,0 +1,64 @@
+﻿@model List<SistemaEducacion.WebEntities.Subscription>
+
+
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs mt-0" data-aos="fade-in">
+        <div class="container">
+            <h2>Nuestras Subscripciones</h2>
+            <p>Contamos con precios altamente competitivos</p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+        <div class="container" data-aos="fade-up">
+            @if (Model != null)
+            {
+                <div class="row">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-3 col-md-6">
+                            <div class="box">
+                                @if (item.SubscriptionID != 4)
+                                {
+                                    <span class="advanced">@item.SubscriptionType</span>
+                                }
+
+                                <h3>@item.SubscriptionType</h3>
+
+                                <h4><sup>₡</sup>@item.SubscriptionPrice<span> / Mensual</span></h4>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+
+                                <div class="btn-wrap">
+                                    @if (item.SubscriptionID != 4)
+                                    {
+                                        <a href="#" class="btn-buy">Compralo ya!</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#" class="btn-buy">Funciones limitadas</a>
+                                    }
+
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            }
+            else
+            {
+                <h2>No has agregado ninguna subscripción</h2>
+            }
+
+
+        </div>
+    </section><!-- End Pricing Section -->
+
+</main><!-- End #main -->

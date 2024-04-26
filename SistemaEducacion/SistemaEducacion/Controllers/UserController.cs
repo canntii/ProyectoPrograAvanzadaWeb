@@ -57,6 +57,22 @@ namespace SistemaEducacion.Controllers
             }
         }
 
+        [HttpGet]
+        public IActionResult ListProfessor()
+        {
+            var resp = _userModel.ListProfessor();
+
+            if (resp?.Code == "00")
+            {
+                return View(resp!.Data);
+            }
+            else
+            {
+                ViewBag.MsjPantalla = resp?.Message;
+                return View(new List<Course>());
+            }
+        }
+
         [HttpPost]
         public IActionResult AcceptOrRejectProfessor(User entity)
         {

@@ -40,10 +40,10 @@
                 <ul>
                     <li><a href="about.html">Acerca</a></li>
                     <li><a href="courses.html">Cursos</a></li>
-                    <li><a href="trainers.html">Profesores</a></li>
+                    <li><a href="@Url.Action("ListProfessor", "User")">Profesores</a></li>
                     <li><a href="events.html">Eventos</a></li>
-                    <li><a href="pricing.html">Costos</a></li>
-                    <li><a class="active align-content-end" href="contact.html">Iniciar Sesión</a></li>
+                    <li><a href="@Url.Action("Index", "Subscription")">Costos</a></li>
+                    <li><a class="active align-content-end" href="@Url.Action("Login", "Home")">Iniciar Sesión</a></li>
 
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
