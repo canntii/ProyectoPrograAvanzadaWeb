@@ -1,4 +1,4 @@
-﻿namespace SistemaEducacion_API.Entities
+﻿namespace SistemaEducacion.WebEntities
 {
     public class Lesson
     {
@@ -7,21 +7,14 @@
         public string? LessonDescription { get; set; }
         public bool Estado { get; set; }
         public int CourseID { get; set; }
+
         public virtual Course? Course { get; set; }
     }
 
     public class LessonAnswer
     {
-        public LessonAnswer()
-        {
-            Code = "00";
-            Message = string.Empty; 
-        }
-
+        public Lesson? info { get; set; }
         public string? Code { get; set; }
         public string? Message { get; set; }
-        public Lesson? Datum { get; set; }
-        public List<Lesson>? Data { get; set; }
-
     }
 }

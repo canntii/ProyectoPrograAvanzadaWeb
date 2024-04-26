@@ -6,6 +6,7 @@ using SistemaEducacion_API.Services;
 using SistemaEducacion_API.Entity;
 using System.Data;
 using System.Data.SqlClient;
+using static Dapper.SqlMapper;
 
 namespace SistemaEducacion_API.Controllers
 {
@@ -35,7 +36,7 @@ namespace SistemaEducacion_API.Controllers
                 else
                 {
                     answer.Datum = result;
-                    answer.Datum.Token = _utilitariosModel.GenerarToken(result.EmailUser ?? string.Empty);
+                    answer.Datum.Token = _utilitariosModel.GenerarToken(result.UserID);
                 }
 
                 return Ok(answer);
@@ -129,6 +130,111 @@ namespace SistemaEducacion_API.Controllers
                 return Ok(answer);
             }
         }
+
+        [HttpPut]
+        [Route("BecomeProfessor")]
+        public IActionResult BecomeProfessor(User entity)
+        {
+
+            int UserID = int.Parse(_utilitariosModel.Decrypt(User.Identity!.Name!));
+
+            //IsTeacher pasa a 2 para que quede como estado pendiente de revision
+            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                UserAnswer answer = new UserAnswer();
   
+                var result = db.Execute("BecomeProfessor",
+                new { UserID, entity.PictureUrl },
+                commandType: CommandType.StoredProcedure);
+
+                if (result <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No existe ningún profesor asociado";
+                }
+                else
+                {
+                    answer.Code = "0";
+                    answer.Message = "Solicitud enviada con éxito";
+                }
+
+                return Ok(answer);
+            }
+        }
+
+        [HttpPut]
+        [Route("AcceptOrRejectProfessor")]
+        public IActionResult AcceptOrRejectProfessor(User entity) // 0 igual a rechazado // 3 igual a aprobado
+        {
+            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                UserAnswer answer = new UserAnswer();
+                var result = db.Execute("AcceptOrRejectProfessor",
+                new { entity.UserID, AcceptOrReject = entity.IsTeacher },
+                commandType: CommandType.StoredProcedure);
+
+                if (result <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No existe ningún profesor asociado";
+                }
+                else
+                {
+                    answer.Code = "0";
+                    answer.Message = "Solicitud enviada con éxito";
+                }
+
+                return Ok(answer);
+            }
+        }
+
+        [HttpGet]
+        [Route("ViewProfessorApplicants")]
+        public IActionResult ViewProfessorApplicants()
+        {
+            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                UserAnswer answer = new UserAnswer();
+                var result = db.Query<User>("ViewProfessorApplicants",
+                commandType: CommandType.StoredProcedure).ToList();
+
+                if (result.Count <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No existe ningún profesor asociado";
+                }
+                else
+                {
+                    answer.Data = result;
+                }
+                return Ok(answer);
+            }
+        }
+
+        [HttpGet]
+        [Route("SeeProfesorCourse/{CourseID}")]
+        public IActionResult SeeProfesorCourse(int CourseID)
+        {
+            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                UserAnswer answer = new UserAnswer();
+
+                var result = db.Query<User>("SeeProfesorCourse", new { CourseID }
+                    , commandType: CommandType.StoredProcedure).FirstOrDefault();
+
+                if (result == null)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No hay ningún profesor...";
+                }
+                else
+                {
+                    answer.Datum = result;
+                }
+
+                return Ok(answer);
+            }
+        }
+
     }
 }

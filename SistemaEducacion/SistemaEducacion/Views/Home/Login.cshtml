@@ -3,66 +3,88 @@
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div id="main">
 
-<div class="hold-transition login-page ">
-    <div class="card">
-        <div class="card-body login-card-body">
-            <p class="login-box-msg">Iniciar Sesión</p>
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs mt-0" data-aos="fade-in">
+        <div class="container">
+            <h2>Inicia Sesión</h2>
+            <p>Aprenderás de todo!!! </p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact pt-0">
+        <div data-aos="fade-up" style="position: relative; z-index: -2;">
+            <img style="border:0; width: 100%; height: 350px;" src="https://cantiedu.blob.core.windows.net/videos-container/Untitled%20design%20(1).png?sp=r&st=2024-04-26T03:44:02Z&se=2024-09-01T11:44:02Z&spr=https&sv=2022-11-02&sr=b&sig=xOnE8cyAWZsTd385bADN2VJ6rTzIqRaMZ%2FAYKejgorc%3D" frameborder="0" allowfullscreen></img>
+        </div>
 
-            @using (Html.BeginForm("Login", "Home", FormMethod.Post))
-            {
-                <div class="input-group mb-3">
-                    @Html.TextBoxFor(m => m.EmailUser, new
-                        {
-                            @class = "form-control",
-                            placeholder = "Correo Electrónico",
-                            @type = "Email",
-                            @required = "true"
-                        })
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-envelope"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="input-group mb-3">
-                    @Html.TextBoxFor(m => m.PasswordUser, new
-                        {
-                            @class = "form-control",
-                            placeholder = "Clave",
-                            @type = "Password",
-                            @required = "true"
-                        })
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-envelope"></span>
-                        </div>
-                    </div>
-                </div>
-
-                @if (ViewBag.MsjScreen != null)
+        <div class="container shadow" data-aos="fade-up mt-4" style="
+        position: relative;
+        z-index: 2;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: -150px;
+    ">
+            <div class="col-lg-12 mt-5 mt-lg-0 p-4">
+                <h2 class="pt-4 text-center">Inicia Sesión</h2>
+                <!--cLASS php-email-form-->
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "php-email-form" }))
                 {
-                    <div class="alert alert-warning" role="alert" style="text-align:center">
-                        @ViewBag.MsjScreen
+                    <div class="row">
+                        <div class="form-group mt-3">
+                            @Html.TextBoxFor(m => m.EmailUser, new
+                                {
+                                    @class = "form-control",
+                                    placeholder = "Correo Electrónico",
+                                    @type = "Email",
+                                    @required = "true",
+                                    @style = "height: 76px; font-size: 16px"
+                                })
+                        </div>
                     </div>
+                    <div class="form-group mt-3">
+                        @Html.TextBoxFor(m => m.PasswordUser, new
+                            {
+                                @class = "form-control",
+                                placeholder = "Clave",
+                                @type = "Password",
+                                @required = "true",
+                                @style = "height: 76px; font-size: 16px"
+                            })
+                    </div>
+
+                    <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Iniciar Sesión</button></div>
+
+                    <div class="d-flex justify-content-center gap-4">
+
+                        <div style="text-align:center; margin-top:2%">
+                            <a href="@Url.Action("RecoverAccess","Home")" class="text-center">¿Olvidaste la contraseña?</a>
+                        </div>
+                        <div style="text-align:center; margin-top:2%">
+                            <a href="@Url.Action("RegisterUser","Home")" class="text-center">¿No tienes una cuenta?</a>
+                        </div>
+                     </div>
+
+                    @if (ViewBag.MsjPantalla != null)
+                    {
+                        <div class="alert alert-warning" role="alert" style="text-align:center">
+                            @ViewBag.MsjScreen
+                        </div>
+                    }
                 }
 
-                <div class="row">
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block">Procesar</button>
-                    </div>
-                </div>
-
-                <div style="text-align:center; margin-top:2%">
-                    <a href="@Url.Action("RecoverAccess","Home")" class="text-center">¿Olvidaste la contraseña?</a>
-                </div>
-                <div style="text-align:center; margin-top:2%">
-                    <a href="@Url.Action("RegisterUser","Home")" class="text-center">¿No tienes una cuenta?</a>
-                </div>
-            }
+            </>
 
         </div>
-    </div>
 
+        </div>
+    </section><!-- End Contact Section -->
 
-</div>
+</div><!-- End #main -->
+

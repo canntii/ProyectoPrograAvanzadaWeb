@@ -1,0 +1,36 @@
+﻿@model List<SistemaEducacion.WebEntities.Course>
+
+@{
+    ViewData["Title"] = "Cursos";
+}
+
+<div id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs mt-0" data-aos="fade-in">
+        <div class="container">
+            <h1>Clases</h1>
+            <h3>Aquí encontrarás todas tus clases!!</h3>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+        <div class="container" data-aos="fade-up">
+            @foreach (var item in Model)
+            {
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="@item.MiniPictureUrl" alt="..." width="100%">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="">@item.LessonDescription</a></h5>
+                                <p>@ViewBag.Profesor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </section><!-- End Events Section -->
+</div><!-- End #main -->

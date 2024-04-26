@@ -1,4 +1,5 @@
 ﻿using Microsoft.IdentityModel.Tokens;
+using SistemaEducacion_API.Entity;
 using SistemaEducacion_API.Services;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net.Mail;
@@ -13,10 +14,10 @@ namespace SistemaEducacion_API.Models
         string SecretKey = _configuration.GetSection("settings:SecretKey").Value ?? string.Empty;
 
 
-        public string GenerarToken(string userEmail)
+        public string GenerarToken(int UserID)
         {
             List<Claim> claims = new List<Claim>();
-            claims.Add(new Claim("EmailUser", Encrypt(userEmail)));
+            claims.Add(new Claim(ClaimTypes.Name, Encrypt(UserID.ToString())));
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(SecretKey));
             var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
@@ -92,6 +93,30 @@ namespace SistemaEducacion_API.Models
             client.EnableSsl = true;
             client.Send(msg);
 
+        }
+
+        public string Decrypt(string texto)
+        {
+            byte[] iv = new byte[16];
+            byte[] buffer = Convert.FromBase64String(texto);
+
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(SecretKey);
+                aes.IV = iv;
+                ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+
+                using (MemoryStream memoryStream = new MemoryStream(buffer))
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader streamReader = new StreamReader(cryptoStream))
+                        {
+                            return streamReader.ReadToEnd();
+                        }
+                    }
+                }
+            }
         }
     }
 

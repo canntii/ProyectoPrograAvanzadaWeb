@@ -2,6 +2,9 @@ using SistemaEducacion.Models;
 using SistemaEducacion.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+var config = builder.Configuration;
+string AzureKey = config["settings:azureKey"]!.ToString();
+string StorageAccount = config["settings:StorageAccount"]!.ToString();
 
 // Add services to the container.
 
@@ -16,6 +19,8 @@ builder.Services.AddSingleton<ILesson, LessonModel>();
 builder.Services.AddSingleton<ISuscription, SuscriptionModel>();
 builder.Services.AddSingleton<IUtilitariosModel, UtilitariosModel>();
 builder.Services.AddSingleton<IVideoModel, VideoModel>();
+builder.Services.AddSingleton<IFileModel, FileModel>();
+
 
 
 

@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using SistemaEducacion_API.Interfaces;
 using SistemaEducacion_API.Models;
 using SistemaEducacion_API.Services;
 using Swashbuckle.AspNetCore.Filters;
@@ -12,8 +11,6 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
 string SecretKey = config["settings:SecretKey"]!.ToString();
-string AzureKey = config["settings:azureKey"]!.ToString();
-string StorageAccount = config["settings:StorageAccount"]!.ToString();
 
 
 
@@ -24,7 +21,6 @@ builder.Services.AddEndpointsApiExplorer();
 
 
 builder.Services.AddSingleton<IUtilitariosModel, UtilitariosModel>();
-builder.Services.AddSingleton<IFileModel, FileModel>();
 
 builder.Services.Configure<FormOptions>(options =>
 {
@@ -66,12 +62,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             }
         };
     });
+
 var app = builder.Build();
 
+app.UseExceptionHandler("/api/error/error");
 
 app.UseSwagger();
 
 app.UseSwaggerUI();
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

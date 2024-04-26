@@ -15,7 +15,6 @@ namespace SistemaEducacion.Models
                     { "action","Login"}
                 });
             }
-
             base.OnActionExecuting(context);
         }
     }

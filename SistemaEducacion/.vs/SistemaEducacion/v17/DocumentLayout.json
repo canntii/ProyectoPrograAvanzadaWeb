@@ -3,64 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\course\\seelessons.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\course\\seelessons.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\home\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\home\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\course\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\course\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\home\\registeruser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\home\\registeruser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\models\\lessonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\models\\lessonmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\home\\recoveraccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\home\\recoveraccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\models\\security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\models\\security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\webentities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\webentities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\services\\iusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\services\\iusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\services\\iutilitariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\services\\iutilitariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\webentities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\webentities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\models\\utilitariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\models\\utilitariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\course\\addcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\course\\addcourse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\webentities\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\webentities\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\home\\recoveraccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\home\\recoveraccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\home\\registeruser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\home\\registeruser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\models\\suscriptionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\models\\suscriptionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|c:\\users\\bryan\\onedrive\\documentos\\github\\proyectoprograavanzadaweb\\sistemaeducacion\\sistemaeducacion\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3742E8A-0F11-42EE-88D5-32873A767FEB}|SistemaEducacion\\SistemaEducacion.csproj|solutionrelative:sistemaeducacion\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,45 +74,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 222,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RecoverAccess.cshtml",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\RecoverAccess.cshtml",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Home\\RecoverAccess.cshtml",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\RecoverAccess.cshtml",
-              "RelativeToolTip": "SistemaEducacion\\Views\\Home\\RecoverAccess.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-29T00:06:03.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "SistemaEducacion\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-28T21:15:44.449Z",
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "SistemaEducacion\\Controllers\\CourseController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T02:50:58.484Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "SistemaEducacion\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAowF4AAAAeAAAA",
+              "Title": "SeeLessons.cshtml",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Course\\SeeLessons.cshtml",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Course\\SeeLessons.cshtml",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Course\\SeeLessons.cshtml",
+              "RelativeToolTip": "SistemaEducacion\\Views\\Course\\SeeLessons.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-26T05:13:04.733Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\WebEntities\\Course.cs",
+              "RelativeDocumentMoniker": "SistemaEducacion\\WebEntities\\Course.cs",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\WebEntities\\Course.cs",
+              "RelativeToolTip": "SistemaEducacion\\WebEntities\\Course.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T01:25:47.103Z",
+              "WhenOpened": "2024-04-26T05:03:26.098Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LessonModel.cs",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Models\\LessonModel.cs",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Models\\LessonModel.cs",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Models\\LessonModel.cs",
+              "RelativeToolTip": "SistemaEducacion\\Models\\LessonModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T06:25:28.942Z",
               "EditorCaption": ""
             },
             {
@@ -119,152 +139,152 @@
               "RelativeDocumentMoniker": "SistemaEducacion\\Models\\UserModel.cs",
               "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Models\\UserModel.cs",
               "RelativeToolTip": "SistemaEducacion\\Models\\UserModel.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowDAAAAAMAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAkwG0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T01:14:32.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IUserModel.cs",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Services\\IUserModel.cs",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Services\\IUserModel.cs",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Services\\IUserModel.cs",
-              "RelativeToolTip": "SistemaEducacion\\Services\\IUserModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T22:48:51.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Answer.cs",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\WebEntities\\Answer.cs",
-              "RelativeDocumentMoniker": "SistemaEducacion\\WebEntities\\Answer.cs",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\WebEntities\\Answer.cs",
-              "RelativeToolTip": "SistemaEducacion\\WebEntities\\Answer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T21:38:33.284Z",
+              "WhenOpened": "2024-04-26T06:08:31.587Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Security.cs",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Models\\Security.cs",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Models\\Security.cs",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Models\\Security.cs",
-              "RelativeToolTip": "SistemaEducacion\\Models\\Security.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "IUserModel.cs",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Services\\IUserModel.cs",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Services\\IUserModel.cs",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Services\\IUserModel.cs",
+              "RelativeToolTip": "SistemaEducacion\\Services\\IUserModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T22:59:28.39Z",
+              "WhenOpened": "2024-04-26T02:19:56.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddCourse.cshtml",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Course\\AddCourse.cshtml",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Course\\AddCourse.cshtml",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Course\\AddCourse.cshtml",
+              "RelativeToolTip": "SistemaEducacion\\Views\\Course\\AddCourse.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-26T05:09:25.386Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "SistemaEducacion\\Models\\ErrorViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\WebEntities\\User.cs",
+              "RelativeDocumentMoniker": "SistemaEducacion\\WebEntities\\User.cs",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\WebEntities\\User.cs",
+              "RelativeToolTip": "SistemaEducacion\\WebEntities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T22:55:22.188Z",
+              "WhenOpened": "2024-04-26T02:24:19.982Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ChangePassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\ChangePassword.cshtml",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Home\\ChangePassword.cshtml",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\ChangePassword.cshtml",
-              "RelativeToolTip": "SistemaEducacion\\Views\\Home\\ChangePassword.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAvAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Course\\Index.cshtml",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Course\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Course\\Index.cshtml",
+              "RelativeToolTip": "SistemaEducacion\\Views\\Course\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-28T21:32:03.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegisterUser.cshtml",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\RegisterUser.cshtml",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Home\\RegisterUser.cshtml",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\RegisterUser.cshtml",
-              "RelativeToolTip": "SistemaEducacion\\Views\\Home\\RegisterUser.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-29T00:06:03.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UtilitariosModel.cs",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Models\\UtilitariosModel.cs",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Models\\UtilitariosModel.cs",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Models\\UtilitariosModel.cs",
-              "RelativeToolTip": "SistemaEducacion\\Models\\UtilitariosModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-29T00:04:33.048Z",
+              "WhenOpened": "2024-04-26T04:21:59.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "IUtilitariosModel.cs",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Services\\IUtilitariosModel.cs",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Services\\IUtilitariosModel.cs",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Services\\IUtilitariosModel.cs",
-              "RelativeToolTip": "SistemaEducacion\\Services\\IUtilitariosModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T22:48:27.108Z",
+              "Title": "RecoverAccess.cshtml",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\RecoverAccess.cshtml",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Home\\RecoverAccess.cshtml",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\RecoverAccess.cshtml",
+              "RelativeToolTip": "SistemaEducacion\\Views\\Home\\RecoverAccess.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAABMAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-26T03:51:37.707Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\Login.cshtml",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Home\\Login.cshtml",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\Login.cshtml",
-              "RelativeToolTip": "SistemaEducacion\\Views\\Home\\Login.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAUwEIAAAAAAAAA",
+              "DocumentIndex": 10,
+              "Title": "RegisterUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\RegisterUser.cshtml",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Home\\RegisterUser.cshtml",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\RegisterUser.cshtml",
+              "RelativeToolTip": "SistemaEducacion\\Views\\Home\\RegisterUser.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-28T21:17:44.431Z",
+              "WhenOpened": "2024-04-26T02:53:00.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SistemaEducacion\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T04:21:36.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\appsettings.json",
-              "RelativeDocumentMoniker": "SistemaEducacion\\appsettings.json",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\appsettings.json",
-              "RelativeToolTip": "SistemaEducacion\\appsettings.json",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "SistemaEducacion\\Views\\Home\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-26T03:44:37.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SuscriptionModel.cs",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Models\\SuscriptionModel.cs",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Models\\SuscriptionModel.cs",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Models\\SuscriptionModel.cs",
+              "RelativeToolTip": "SistemaEducacion\\Models\\SuscriptionModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-28T22:49:16.786Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T04:20:37.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Program.cs",
-              "RelativeDocumentMoniker": "SistemaEducacion\\Program.cs",
-              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Program.cs",
-              "RelativeToolTip": "SistemaEducacion\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T21:37:42.548Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SistemaEducacion\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAGUBAAAAAAAAAAAAAHUBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-26T01:33:07.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SistemaEducacion\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\bryan\\OneDrive\\Documentos\\GitHub\\ProyectoPrograAvanzadaWeb\\SistemaEducacion\\SistemaEducacion\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SistemaEducacion\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAAAIsAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-26T01:32:16.331Z",
               "EditorCaption": ""
             }
           ]

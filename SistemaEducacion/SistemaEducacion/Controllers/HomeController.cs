@@ -2,6 +2,7 @@
 using SistemaEducacion.WebEntities;
 using SistemaEducacion.Models;
 using SistemaEducacion.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SistemaEducacion.Controllers
 {
@@ -33,7 +34,7 @@ namespace SistemaEducacion.Controllers
                 else
                 {
                     HttpContext.Session.SetString("Login", "true");
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("BecomeProfessor", "User");
                 }
             }
             else
@@ -122,7 +123,7 @@ namespace SistemaEducacion.Controllers
             }
         }
 
-        [Security]
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult Index()
         {

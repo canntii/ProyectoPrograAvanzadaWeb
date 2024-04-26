@@ -12,9 +12,9 @@
         public int? SubscriptionID { get; set; }
         public string? SubscriptionType { get; set; }
         public string? TemporalPassword {  get; set; }
-
-
-
+        public int IsTeacher { get; set; } //1 Usuario normal //2 En proceso de aprobacion //3 Teacher
+        public string? PictureUrl { get; set; }
+        public IFormFile? PictureUploads { get; set; }
         public bool? Estado { get; set; }
         public string? Token { get; set; }
         public bool Temporary { get; set; }

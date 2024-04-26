@@ -5,28 +5,22 @@ namespace SistemaEducacion.Models
 {
     public class VideoModel(HttpClient _httpClient, IConfiguration _configuration) : IVideoModel
     {
-        public async Task<Answer?> UploadVideo(Video entity)
+        public VideoAnswer? UploadVideo(Video entity)
         {
-
             string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/Video/UploadVideo";
 
-            var formData = new MultipartFormDataContent();
+            entity.VideoUploads = null;
+            entity.MiniPictureUploads = null;
 
-            formData.Add(new StreamContent(entity.VideoUploads!.OpenReadStream()), "VideoUploads", entity.VideoUploads.FileName);
-            formData.Add(new StreamContent(entity.MiniPictureUploads!.OpenReadStream()), "PictureUploads", entity.MiniPictureUploads.FileName);
-            formData.Add(new StringContent(entity.LessonID.ToString()), "LessonID");
+            JsonContent body = JsonContent.Create(entity);
+            var resp = _httpClient.PostAsync(url, body).Result;
 
-            HttpResponseMessage response = await _httpClient.PostAsync(url, formData);
-
-            if (response.IsSuccessStatusCode)
+            if (resp.IsSuccessStatusCode)
             {
-                return await response.Content.ReadFromJsonAsync<Answer>();
+                return resp.Content.ReadFromJsonAsync<VideoAnswer>().Result;
             }
-            else
-            {
-                return null;
-            }
+
+            return null;
         }
     }
-
 }

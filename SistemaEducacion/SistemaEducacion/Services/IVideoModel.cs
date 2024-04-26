@@ -4,6 +4,6 @@ namespace SistemaEducacion.Services
 {
     public interface IVideoModel
     {
-        Task<Answer?> UploadVideo(Video entity);
+        VideoAnswer? UploadVideo(Video entity);
     }
 }

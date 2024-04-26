@@ -1,0 +1,76 @@
+﻿@model List<SistemaEducacion.WebEntities.User>
+
+@{
+    ViewData["Title"] = "Applicants";
+}
+
+
+<div id="main" data-aos="fade-in">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs mt-0">
+        <div class="container">
+            <h2>Perfiles de Aplicantes a Profesores</h2>
+            <p>En esta sección aparecerán todos los usuarios que soliciten ser profesores</p>
+
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Trainers Section ======= -->
+    <section id="trainers" class="trainers">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch ">
+                        <div class="member pb-4">
+                            <img src="@item.PictureUrl" class="img-fluid" alt="">
+                            <div class="member-content">
+                                <h4>@item.FirstNameUser @item.LastNameUser</h4>
+                                <span>@item.EmailUser</span>
+                            </div>
+                            <div class="d-flex justify-content-center gap-2">
+                                <!-- Formulario para aprobar -->
+                                @using (Html.BeginForm("AcceptOrRejectProfessor", "User", FormMethod.Post))
+                                {
+                                    <input type="hidden" name="UserID" value="@item.UserId">
+                                    <input type="hidden" name="FirstNameUser" value="@item.FirstNameUser">
+                                    <input type="hidden" name="LastNameUser" value="@item.LastNameUser">
+                                    <input type="hidden" name="EmailUser" value="@item.EmailUser">
+                                    <input type="hidden" name="PictureUrl" value="@item.PictureUrl">
+                                    <input type="hidden" name="IsTeacher" value="3">
+                                    <button type="submit" class="btn btn-outline-dark">Aprobar</button> <!-- Botón de enviar -->
+                                }
+
+                                <!-- Formulario para rechazar -->
+                                @using (Html.BeginForm("AcceptOrRejectProfessor", "User", FormMethod.Post))
+                                {
+                                    <input type="hidden" name="UserID" value="@item.UserId">
+                                    <input type="hidden" name="FirstNameUser" value="@item.FirstNameUser">
+                                    <input type="hidden" name="LastNameUser" value="@item.LastNameUser">
+                                    <input type="hidden" name="EmailUser" value="@item.EmailUser">
+                                    <input type="hidden" name="PictureUrl" value="@item.PictureUrl">
+                                    <input type="hidden" name="IsTeacher" value="0">
+                                    <button type="submit" class="btn btn-outline-danger">Rechazar</button> <!-- Botón de enviar -->
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                @if(Model.Count == 0)
+                {
+                    <div>
+                        <h3 class="text-center">No hay usuarios por revisar :)</h3>
+                    </div>
+                }
+            </div>
+        </div>
+    </section><!-- End Trainers Section -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+</div><!-- End #main -->

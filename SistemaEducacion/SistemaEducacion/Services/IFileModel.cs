@@ -1,6 +1,6 @@
-﻿using SistemaEducacion_API.Entities;
+﻿using SistemaEducacion.WebEntities;
 
-namespace SistemaEducacion_API.Interfaces
+namespace SistemaEducacion.Services
 {
     public interface IFileModel
     {
@@ -8,6 +8,5 @@ namespace SistemaEducacion_API.Interfaces
         Task<BlobResponseDto> UploadAsync(IFormFile blob);
         Task<BlobDto?> DownloadAsync(string blobFileName);
         Task<BlobResponseDto> DeleteAsync(string blobFileName);
-
     }
 }
