@@ -46,19 +46,6 @@ namespace SistemaEducacion.Models
             return null;
         }
 
-        public UserAnswer? PopularProfessors()
-        {
-            string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/User/PopularProfessors";
-            var resp = _httpClient.GetAsync(url).Result;
-
-            if (resp.IsSuccessStatusCode)
-            {
-                return resp.Content.ReadFromJsonAsync<UserAnswer>().Result;
-            }
-
-            return null;
-        }
-
         public UserAnswer? RecoverAccess(User entity)
         {
             string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/User/RecoverAccess";

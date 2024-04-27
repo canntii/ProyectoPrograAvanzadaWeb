@@ -8,7 +8,7 @@ namespace SistemaEducacion.Controllers
 {
 
     [ResponseCache(NoStore = true, Duration = 0)]
-    public class HomeController(IUserModel _userModel, IUtilitariosModel _utilitariosModel, ICourse _courseModel) : Controller
+    public class HomeController(IUserModel _userModel, IUtilitariosModel _utilitariosModel) : Controller
     {
         [HttpGet]
         public IActionResult Login()
@@ -114,10 +114,6 @@ namespace SistemaEducacion.Controllers
 
             if (resp?.Code == "00")
             {
-                HttpContext.Session.SetString("EmailUser", resp?.Datum?.EmailUser!);
-                HttpContext.Session.SetString("FirstNameUser", resp?.Datum?.FirstNameUser!);
-                HttpContext.Session.SetString("RoleId", resp?.Datum?.RoleID!.ToString());
-                HttpContext.Session.SetString("UserId", resp?.Datum?.UserId!.ToString());
                 HttpContext.Session.SetString("Login", "true");
                 return RedirectToAction("Index", "Home");
             }
@@ -133,14 +129,6 @@ namespace SistemaEducacion.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var resp = _utilitariosModel.Conteo();
-            ViewBag.Estudiantes = resp?.Estudiantes;
-            ViewBag.Profesores = resp?.Profesores;
-            ViewBag.Cursos = resp?.Cursos;
-
-            var resp2 = _courseModel.PopularCourses();
-            ViewBag.Populares = resp2.Data;
-
             return View();
         }
 
