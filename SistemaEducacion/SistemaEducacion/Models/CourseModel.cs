@@ -38,6 +38,37 @@ namespace SistemaEducacion.Models
             return null;
         }
 
+        public CourseAnswer? ListMyCourses(int UserId)
+        {
+            string url = _config.GetSection("settings:UrlWebApi").Value + "api/Course/ListMyCourses/" + UserId;
+
+            string token = _context.HttpContext?.Session.GetString("Token")!;
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var resp = _httpClient.GetAsync(url).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<CourseAnswer>().Result;
+
+            return null;
+        }
+
+        public CourseAnswer? ListMySucriptionCourses(int UserId)
+        {
+            string url = _config.GetSection("settings:UrlWebApi").Value + "api/Course/ListMySucriptionCourses/" + UserId;
+
+            string token = _context.HttpContext?.Session.GetString("Token")!;
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var resp = _httpClient.GetAsync(url).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<CourseAnswer>().Result;
+
+            return null;
+        }
+
+
         public CourseAnswer? SeeLessonCourse(int CourseID)
         {
             string url = _config.GetSection("settings:UrlWebApi").Value + "api/Course/SeeLessonCourse" + "/" + CourseID;

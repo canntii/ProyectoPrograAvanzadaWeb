@@ -181,6 +181,72 @@ h6 {
   }
 }
 
+.update-btn {
+    border: none;
+    margin-left: 30px;
+    background: #303036;
+    color: #fff;
+    border-radius: 20px;
+    padding: 1px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 18px;
+    text-align: center;
+    align-content: center;
+}
+
+.add-btn {
+    border:none;
+    margin-left: 30px;
+    background: #5fcf80;
+    color: #fff;
+    border-radius: 20px;
+    padding: 1px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 18px;
+    text-align:center;
+    align-content:center;
+}
+
+.add-btn {
+    background: #3ac162;
+    color: #fff;
+}
+
+.agregarButton {
+    border: none;
+    background: #5fcf80;
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 50px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 18px;
+    text-align: center;
+    align-content: center;
+}
+
+.becomeProfessor-btn {
+    border: none;
+    background: #5fcf80;
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 50px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 18px;
+    text-align: center;
+    align-content: center;
+}
+
+@media (max-width: 768px) {
+    .add-btn {
+        margin: 0 15px 0 0;
+        padding: 6px 18px;
+    }
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -227,7 +293,8 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover>a 
+.div .active{
   color: #5fcf80;
 }
 

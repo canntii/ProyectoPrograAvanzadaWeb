@@ -1,0 +1,94 @@
+﻿@using SistemaEducacion.WebEntities
+@model IEnumerable<Course>
+@inject IHttpContextAccessor _context
+@inject IConfiguration _config
+
+
+@{
+    ViewData["Title"] = "Cursos";
+    var rol = _context.HttpContext.Session.GetString("RoleId");
+}
+<main id="main">
+
+    <!-- ======= Popular Courses Section ======= -->
+    <section id="popular-courses" class="courses">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Mis Cursos</h2>
+            </div>
+            @if (rol == _config.GetSection("roles")["Professor"])
+            {
+                <div class="section-title">
+                    <div class="row">
+                        <div class="d-flex align-content-between">
+                            <p>Creados por mi</p>
+                            <a href="@Url.Action("AddCourse", "Course")" class="add-btn ">Crear Curso</a>
+                        </div>
+                    </div>
+                </div>
+                @if (ViewBag.Miscursos != null)
+                {
+                    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                        @foreach (var item in ViewBag.Miscursos)
+                        {
+                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                                <div class="course-item" style="width:100%">
+                                    <img src="@item.PictureUrl" class="img-fluid" alt="..." style="width:100%; height:60%">
+                                    <div class="course-content">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h4>Curso #@item.CourseID</h4>
+                                        </div>
+
+                                        <h3><a href="@Url.Action("SeeLessons", "Course", new {@CourseID = item.CourseID})">@item.CourseTitle</a></h3>
+                                        <p>@item.CourseDescription</p>
+                                    </div>
+                                </div>
+                            </div> <!-- End Course Item-->
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p>No se ha creado un curso...</p>
+                }
+            }
+
+            
+
+
+            <div class="section-title mt-4">
+                <p>Suscritos</p>
+            </div>
+            @if (Model != null && Model.Count() > 0)
+            {
+                <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                            <div class="course-item" style="width:100%">
+                                <img src="@item.PictureUrl" class="img-fluid" alt="..." style="width:100%; height:60%">
+                                <div class="course-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h4>Curso #@item.CourseID</h4>
+                                    </div>
+
+                                    <h3><a href="@Url.Action("SeeLessons", "Course", new {CourseID = item.CourseID})">@item.CourseTitle</a></h3>
+                                    <p>@item.CourseDescription</p>
+                                </div>
+                            </div>
+                        </div> <!-- End Course Item-->
+                    }
+
+                </div>
+            }
+            else
+            {
+                <p>No has adquirido ningun curso..</p>
+            }
+
+        </div>
+    </section><!-- End Popular Courses Section -->
+
+
+</main><!-- End #main -->

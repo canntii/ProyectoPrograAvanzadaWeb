@@ -4,42 +4,109 @@
     ViewData["Title"] = "AddCourse";
 }
 
-<h1>Crear Curso</h1>
+<div id="main">
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        @using (Html.BeginForm("AddCourse", "Course", FormMethod.Post, new { enctype = "multipart/form-data" }))
-        {
-            <div>
-                @Html.LabelFor(model => model.CourseTitle)
-                @Html.TextBoxFor(model => model.CourseTitle, new { @class = "form-control", @placeholder = "Clase", @type = "text", @required = "true" })
-            </div>
-            <div>
-                @Html.LabelFor(model => model.CourseDescription)
-                @Html.TextBoxFor(model => model.CourseDescription, new { @class = "form-control", @placeholder = "Clase", @type = "text", @required = "true" })
-            </div>
-            <div>
-                @Html.LabelFor(model => model.StartDate)
-                @Html.TextBoxFor(model => model.StartDate, new { @class = "form-control", @type = "date", @required = "true" })
-            </div>
-            <div>
-                @Html.LabelFor(model => model.EndDate)
-                @Html.TextBoxFor(model => model.EndDate, new { @class = "form-control", @type = "date", @required = "true" })
-            </div>
-            <div>
-                @Html.LabelFor(model => model.PictureUploads)
-                @Html.TextBoxFor(model => model.PictureUploads, new { @class = "form-control", @placeholder = "Clase", @type = "file", @required = "true" })
-            </div>
-            <button type="submit">Subir</button>
-        }
-    </div>
-</div>
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs mt-0" data-aos="fade-in">
+        <div class="container">
+            <h2>Mis Cursos</h2>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact pt-0">
+        <div data-aos="fade-up" style="position: relative; z-index: -2;">
+            <img style="border:0; width: 100%; height: 350px;" src="https://cantiedu.blob.core.windows.net/videos-container/fondoCurso.jpeg?sp=r&st=2024-04-26T22:34:13Z&se=2024-05-24T06:34:13Z&spr=https&sv=2022-11-02&sr=b&sig=eoGCYj%2FwV4%2FSVVzDcSoSaOIWZX7S%2Fl0MOrOwn8KcjUQ%3D" frameborder="0" allowfullscreen></img>
+        </div>
+
+        <div class="container shadow" data-aos="fade-up mt-4" style="
+        position: relative;
+        z-index: 2;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: -150px;
+    ">
+            <div class="col-lg-12 mt-5 mt-lg-0 p-4">
+                <h2 class="pt-4 text-center">Añadir Curso</h2>
+                <!--cLASS php-email-form-->
+                @using (Html.BeginForm("AddCourse", "Course", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div class="row">
+                        <div class="form-group mt-3">
+                            @Html.TextBoxFor(m => m.CourseTitle, new
+                                {
+                                    @class = "form-control",
+                                    placeholder = "Titulo del Curso",
+                                    @type = "text",
+                                    @required = "true",
+                                    @style = "height: 76px; font-size: 16px"
+                                })
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        @Html.TextBoxFor(m => m.CourseDescription, new
+                            {
+                                @class = "form-control",
+                                placeholder = "Descripcion del Curso",
+                                @type = "text",
+                                @required = "true",
+                                @style = "height: 76px; font-size: 16px"
+                            })
+                    </div>
+
+                    <div class="form-group mt-3">
+                        @Html.TextBoxFor(m => m.StartDate, new
+                            {
+                                @class = "form-control",
+                                placeholder = "Fecha de Inicio",
+                                @type = "date",
+                                @required = "true",
+                                @style = "height: 76px; font-size: 16px"
+                            })
+                    </div>
+
+                    <div class="form-group mt-3">
+                        @Html.TextBoxFor(m => m.EndDate, new
+                            {
+                                @class = "form-control",
+                                placeholder = "Fecha de Finalización",
+                                @type = "date",
+                                @required = "true",
+                                @style = "height: 76px; font-size: 16px"
+                            })
+                    </div>
+
+                    <div class="form-group mt-3">
+                        @Html.TextBoxFor(m => m.PictureUploads, new
+                            {
+                                @class = "form-control form-control-lg ",
+                                placeholder = "Clase",
+                                @type = "file",
+                                @required = "true",
+                                @style = "font-size: 16px"
+                            })
+                    </div>
 
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+                    <div class="text-center mt-5"><button type="submit" class="agregarButton">Crear</button></div>
+
+                    @if (ViewBag.MsjPantalla != null)
+                    {
+                        <div class="alert alert-warning" role="alert" style="text-align:center">
+                            @ViewBag.MsjScreen
+                        </div>
+                    }
+                }
+
+                </>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</div><!-- End #main -->
+
 
 @section Scripts {
     @{

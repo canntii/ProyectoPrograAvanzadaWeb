@@ -6,6 +6,7 @@ namespace SistemaEducacion.Services
     public interface IUserModel
     {
         Answer? RegisterUser(User entity);
+        Answer? UpdateUser(User entity);
         UserAnswer? Login(User entity);
         UserAnswer? RecoverAccess(User entity);
         UserAnswer? ChangePassword(User entity);
@@ -13,6 +14,6 @@ namespace SistemaEducacion.Services
         UserAnswer? BecomeProfessor(User entity);
         UserAnswer? ViewProfessorApplicants();
         UserAnswer? SeeProfesorCourse(int CourseID);
-        UserAnswer? ListProfessor();
+        UserAnswer? SearchUser(int UserId);
     }
 }

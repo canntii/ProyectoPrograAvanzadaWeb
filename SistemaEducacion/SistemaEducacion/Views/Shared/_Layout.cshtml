@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@inject IHttpContextAccessor _context
+@{
+    string? firstNameUser = _context.HttpContext.Session.GetString("FirstNameUser");
+    bool? login = Convert.ToBoolean(_context.HttpContext.Session.GetString("Login"));
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -34,17 +40,33 @@
 
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+            <h1 class="logo me-auto">
+                <a href="@Url.Action("Index", "Home")">SkillForge</a>
+            </h1>
             <nav id="navbar" class="navbar order-last order-lg-0">
 
                 <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+                    <li><a href="@Url.Action("Index", "Course")">Cursos</a></li>
+                    <li><a href="trainers.html">Profesores</a></li>
+                    <li><a href="pricing.html">Costos</a></li>
                     <li><a href="about.html">Acerca</a></li>
-                    <li><a href="courses.html">Cursos</a></li>
-                    <li><a href="@Url.Action("ListProfessor", "User")">Profesores</a></li>
-                    <li><a href="events.html">Eventos</a></li>
-                    <li><a href="@Url.Action("Index", "Subscription")">Costos</a></li>
-                    <li><a class="active align-content-end" href="@Url.Action("Login", "Home")">Iniciar Sesión</a></li>
+                    @if (login == null || login == false)
+                    {
+                        <li><a class="align-content-end active" href="@Url.Action("Login", "Home")">Iniciar Sesión</a></li>
+                    }
+                    else
+                    {
+                        <li class="dropdown">
+                            <a href="#" class="active"><span>@firstNameUser</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="@Url.Action("MyAccount", "User")">Mi Cuenta</a></li>
+                                <li><a href="@Url.Action("MyCourses", "Course")">Mis Cursos</a></li>
+                                <li><a href="@Url.Action("Salir", "Home")">Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
 
+                    }
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
 
@@ -60,7 +82,7 @@
     </main>
 
 
-    <footer id="footer"  >
+    <footer id="footer">
 
         <div class="footer-top">
             <div class="container">
@@ -114,7 +136,7 @@
 
             <div class="me-md-auto text-center text-md-start">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>EDUFIDE</span></strong>. Todos Nuestros Derechos Reservados
+                    &copy; Copyright <strong><span>SKILLFORGE</span></strong>. Todos Nuestros Derechos Reservados
                 </div>
                 <div class="credits">
 
@@ -132,10 +154,10 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     <!-- Vendor JS Files REAL -->
     <script src="~/vendor/aos/aos.js"></script>
     <script src="~/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="~/js/main.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
