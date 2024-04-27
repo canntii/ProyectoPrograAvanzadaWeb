@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SistemaEducacion.Models;
 using SistemaEducacion.Services;
 using SistemaEducacion.WebEntities;
 
@@ -6,10 +7,8 @@ namespace SistemaEducacion.Controllers
 {
 
     [ResponseCache(NoStore = true, Duration = 0)]
-    public class CourseController(IUserModel _userModel, ICourse _courseModel, IHostEnvironment _environment, IFileModel _fileModel) : Controller
+    public class CourseController(IVideoModel _videoModel, ILesson _lessonModel, IUserModel _userModel, ICourse _courseModel, IHostEnvironment _environment, IFileModel _fileModel) : Controller
     {
-
-
         [HttpGet]
         [Route("Course/SeeLessons/{CourseID}")]
         public IActionResult SeeLessons(int CourseID)
@@ -26,6 +25,44 @@ namespace SistemaEducacion.Controllers
             {
                 ViewBag.MsjPantalla = resp?.Message;
                 return View(new List<Course>());
+            }
+        }
+
+        [HttpGet]
+        [Route("Course/RegisterLesson/{CourseID}")]
+        public IActionResult RegisterLesson()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("Course/RegisterLesson/{CourseID}")]
+        public IActionResult RegisterLesson(Lesson entity, Video video)
+        {
+            VideoAnswer videoAnswer = new VideoAnswer();
+
+            var photoResult = _fileModel.UploadAsync(video.MiniPictureUploads!).Result;
+            var videoResult = _fileModel.UploadAsync(video.VideoUploads!).Result;
+
+            if (photoResult.Error || videoResult.Error)
+            {
+                videoAnswer.Code = "-1";
+                videoAnswer.Message = "No se pudieron subir los archivos";
+                return Ok(videoAnswer);
+            }
+
+            video.MiniPictureUrl = photoResult.Blob.Uri;
+            video.VideoUrl = videoResult.Blob.Uri;
+
+            var respVideo = _videoModel.UploadVideo(video);
+            var respLesson = _lessonModel.AddLesson(entity);
+
+            if (respVideo?.Code == "00" && respLesson?.Code == "00")
+                return RedirectToAction("Index", "Course");
+            else
+            {
+                ViewBag.MsjScreen = respLesson?.Message;
+                return View();
             }
         }
 
