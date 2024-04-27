@@ -21,6 +21,7 @@ namespace SistemaEducacion.Controllers
         }
 
         [HttpGet]
+        [Route("Video/UploadVideo/{LessonID}")]
         public IActionResult UploadVideo()
         {
             HttpContext.Session.Clear();
@@ -28,6 +29,7 @@ namespace SistemaEducacion.Controllers
         }
 
         [HttpPost]
+        
         public IActionResult UploadVideo(Video entity)
         {
             //PENDIENTE HACER UN TRY CATCH PARA CUANDO YA EL VIDEO EXISTE EN LA NUBE
@@ -50,7 +52,7 @@ namespace SistemaEducacion.Controllers
             var resp = _videoModel.UploadVideo(entity);
 
             if (resp?.Code == "00")
-                return RedirectToAction("Login", "Home");
+                return RedirectToAction("MyCourses", "Course");
             else
             {
                 ViewBag.MsjScreen = resp?.Message;

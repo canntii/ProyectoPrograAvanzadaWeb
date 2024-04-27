@@ -16,7 +16,7 @@ namespace SistemaEducacion.Controllers
         {
             var resp = _courseModel.SeeLessonCourse(CourseID);
             var prof = _userModel.SeeProfesorCourse(CourseID);
-            
+
             if (resp?.Code == "00")
             {
                 return View(resp!.Data);
@@ -29,6 +29,23 @@ namespace SistemaEducacion.Controllers
         }
 
         [HttpGet]
+        [Route("Course/SeeContentLesson/{LessonID}")]
+        public IActionResult SeeContentLesson(int LessonID)
+        {
+            var resp = _lessonModel.SeeContentLesson(LessonID);
+
+            if (resp?.Code == "00")
+            {
+                return View(resp!.Datum);
+            }
+            else
+            {
+                ViewBag.MsjPantalla = resp?.Message;
+                return View(new List<Lesson>());
+            }
+        }
+
+        [HttpGet]
         [Route("Course/RegisterLesson/{CourseID}")]
         public IActionResult RegisterLesson()
         {
@@ -37,28 +54,24 @@ namespace SistemaEducacion.Controllers
 
         [HttpPost]
         [Route("Course/RegisterLesson/{CourseID}")]
-        public IActionResult RegisterLesson(Lesson entity, Video video)
+        public IActionResult RegisterLesson(Lesson entity, int CourseID)
         {
-            VideoAnswer videoAnswer = new VideoAnswer();
 
-            var photoResult = _fileModel.UploadAsync(video.MiniPictureUploads!).Result;
-            var videoResult = _fileModel.UploadAsync(video.VideoUploads!).Result;
-
-            if (photoResult.Error || videoResult.Error)
-            {
-                videoAnswer.Code = "-1";
-                videoAnswer.Message = "No se pudieron subir los archivos";
-                return Ok(videoAnswer);
-            }
-
-            video.MiniPictureUrl = photoResult.Blob.Uri;
-            video.VideoUrl = videoResult.Blob.Uri;
-
-            var respVideo = _videoModel.UploadVideo(video);
+            //Agregar la clase
             var respLesson = _lessonModel.AddLesson(entity);
 
-            if (respVideo?.Code == "00" && respLesson?.Code == "00")
-                return RedirectToAction("Index", "Course");
+            //Consultar el ultimo ingresado
+            var respCourse = _lessonModel.LastInsert(CourseID);
+            
+           
+
+            //Si la clase se agrega
+            if (respLesson?.Code == "1" && respCourse?.Code != null)
+            {
+                var LessonID = respCourse?.Datum?.LessonID;
+
+                return RedirectToAction("UploadVideo", "Video", new { LessonID });
+            }
             else
             {
                 ViewBag.MsjScreen = respLesson?.Message;
@@ -71,7 +84,7 @@ namespace SistemaEducacion.Controllers
         {
             var resp = _courseModel.ListCourses();
 
-            if(resp?.Code == "00")
+            if (resp?.Code == "00")
             {
                 return View(resp!.Data);
             }
@@ -94,11 +107,11 @@ namespace SistemaEducacion.Controllers
             var roles = _config.GetSection("roles");
             var RoleId = HttpContext.Session.GetString("RoleId");
             var UserId = Convert.ToInt32(HttpContext.Session.GetString("UserId"));
-            if(RoleId == roles["Professor"])
+            if (RoleId == roles["Professor"])
             {
                 var misCursos = _courseModel.ListMyCourses(UserId);
 
-                if(misCursos?.Code == "00")
+                if (misCursos?.Code == "00")
                 {
                     ViewBag.Miscursos = misCursos!.Data;
                 }
@@ -139,7 +152,7 @@ namespace SistemaEducacion.Controllers
             entity.PictureUrl = image.Blob.Uri;
             entity.UserId = Convert.ToInt32(HttpContext.Session.GetString("UserId"));
             var resp = _courseModel.AddCourse(entity);
-            if(resp?.Code == "1")
+            if (resp?.Code == "1")
                 return RedirectToAction("MyCourses", "Course");
             else
             {

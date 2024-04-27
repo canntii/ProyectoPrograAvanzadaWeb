@@ -135,6 +135,7 @@ namespace SistemaEducacion_API.Controllers
 
         [HttpGet]
         [Route("ListMySuscriptionCourses/{UserId}")]
+
         public IActionResult ListMySuscriptionCourses(int UserId)
         {
             using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))

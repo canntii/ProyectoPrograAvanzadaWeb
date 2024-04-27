@@ -8,6 +8,8 @@
         public bool Estado { get; set; }
         public int CourseID { get; set; }
         public virtual Course? Course { get; set; }
+        public string? VideoUrl { get; set; }
+        public string? MiniPictureUrl { get; set; }
     }
 
     public class LessonAnswer
