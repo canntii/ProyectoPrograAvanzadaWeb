@@ -23,5 +23,11 @@ namespace SistemaEducacion.Controllers
                 return View(new List<SubscriptionController>());
             }
         }
+
+        [HttpGet]
+        public IActionResult Subscribe(long SubscriptionID)
+        {
+            return View();
+        }
     }
 }

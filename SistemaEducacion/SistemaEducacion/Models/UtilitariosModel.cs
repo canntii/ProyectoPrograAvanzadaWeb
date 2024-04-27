@@ -1,10 +1,14 @@
-﻿using SistemaEducacion.Services;
+﻿using Microsoft.EntityFrameworkCore;
+using SistemaEducacion.Services;
+using SistemaEducacion.WebEntities;
+using System.Net.Http.Headers;
+using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace SistemaEducacion.Models
 {
-    public class UtilitariosModel(IConfiguration _configuration): IUtilitariosModel
+    public class UtilitariosModel(HttpClient _httpClient, IConfiguration _configuration, IHttpContextAccessor _context) : IUtilitariosModel
     {
         string SecretKey = _configuration.GetSection("settings:SecretKey").Value ?? string.Empty;
 
@@ -60,6 +64,18 @@ namespace SistemaEducacion.Models
                 }
             }
         }
+
+        public Conteos Conteo()
+        {
+            string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/Conteo/Conteos";
+
+            var resp = _httpClient.GetAsync(url).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<Conteos>().Result;
+            return null;
+        }
+
 
     }
 

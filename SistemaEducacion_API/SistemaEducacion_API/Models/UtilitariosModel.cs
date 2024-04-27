@@ -1,11 +1,15 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using SistemaEducacion_API.Entity;
 using SistemaEducacion_API.Services;
+using System.Data.SqlClient;
+using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net.Mail;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using Dapper;
 
 namespace SistemaEducacion_API.Models
 {
@@ -116,6 +120,29 @@ namespace SistemaEducacion_API.Models
                         }
                     }
                 }
+            }
+        }
+
+        public UserAnswer BuscarUsuario(int UserId)
+        {
+            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                UserAnswer answer = new UserAnswer();
+
+                var result = db.Query<User>("SearchUser", new { UserId }
+                    , commandType: CommandType.StoredProcedure).FirstOrDefault();
+
+                if (result == null)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No se encontro el usuario...";
+                }
+                else
+                {
+                    answer.Datum = result;
+                }
+
+                return answer;
             }
         }
     }

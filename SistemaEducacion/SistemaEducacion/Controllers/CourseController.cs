@@ -85,6 +85,12 @@ namespace SistemaEducacion.Controllers
         [HttpGet]
         public IActionResult MyCourses()
         {
+            var login = Convert.ToBoolean(HttpContext.Session.GetString("Login"));
+            if (login == null || login == false)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+
             var roles = _config.GetSection("roles");
             var RoleId = HttpContext.Session.GetString("RoleId");
             var UserId = Convert.ToInt32(HttpContext.Session.GetString("UserId"));

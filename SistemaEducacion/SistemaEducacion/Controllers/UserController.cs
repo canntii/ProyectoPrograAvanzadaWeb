@@ -12,6 +12,7 @@ namespace SistemaEducacion.Controllers
         [HttpGet]
         public IActionResult BecomeProfessor()
         {
+
             return View();
         }
 
@@ -91,6 +92,12 @@ namespace SistemaEducacion.Controllers
         [HttpGet]
         public IActionResult MyAccount()
         {
+            var login = Convert.ToBoolean(HttpContext.Session.GetString("Login"));
+            if (login == null || login == false)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+
             var id = Convert.ToInt32(HttpContext.Session.GetString("UserId"));
             ViewBag.id = id;
             var resp = _userModel.SearchUser(id);

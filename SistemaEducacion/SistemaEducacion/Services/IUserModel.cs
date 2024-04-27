@@ -16,5 +16,6 @@ namespace SistemaEducacion.Services
         UserAnswer? SeeProfesorCourse(int CourseID);
         UserAnswer? SearchUser(int UserId);
         public UserAnswer? ListProfessor();
+        public UserAnswer? PopularProfessors();
     }
 }
