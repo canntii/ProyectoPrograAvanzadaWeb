@@ -52,17 +52,17 @@
                 <div class="row counters align-content-around">
 
                     <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
+                        <span data-purecounter-start="0" data-purecounter-end="@ViewBag.Estudiantes" data-purecounter-duration="1" class="purecounter"></span>
                         <p>Estudiantes</p>
                     </div>
 
                     <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+                        <span data-purecounter-start="0" data-purecounter-end="@ViewBag.Cursos" data-purecounter-duration="1" class="purecounter"></span>
                         <p>Cursos</p>
                     </div>
 
                     <div class="col-lg-3 col-6 text-center">
-                        <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+                        <span data-purecounter-start="0" data-purecounter-end="@ViewBag.Profesores" data-purecounter-duration="1" class="purecounter"></span>
                         <p>Profesores</p>
                     </div>
 
@@ -81,9 +81,6 @@
                             <p>
                                 En nuestra plataforma puedes tener acceso en cualquier momento y lugar siempre y cuando cuentes con acceso a internet. Como usuario podras aprender a tu ritmo y segun tu horario.
                             </p>
-                            <div class="text-center">
-                                <a href="about.html" class="more-btn">Saber más <i class="bx bx-chevron-right"></i></a>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
@@ -132,61 +129,47 @@
                     <p>Cursos Populares</p>
                 </div>
 
-                <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                @if(ViewBag.Populares != null)
+                {
+                    <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="course-item">
-                            <img src="~/img/course-1.jpg" class="img-fluid" alt="...">
-                            <div class="course-content">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h4>Web Development</h4>
-                                    <p class="price">$169</p>
-                                </div>
+                    @foreach(var item in ViewBag.Populares)
+                    {
 
-                                <h3><a href="course-details.html">Website Design</a></h3>
-                                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                                <div class="trainer d-flex justify-content-between align-items-center">
-                                    <div class="trainer-profile d-flex align-items-center">
-                                        <img src="~/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
-                                        <span>Antonio</span>
-                                    </div>
-                                    <div class="trainer-rank d-flex align-items-center">
-                                        <i class="bx bx-user"></i>&nbsp;50
-                                        &nbsp;&nbsp;
-                                        <i class="bx bx-heart"></i>&nbsp;65
+                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                                <div class="course-item" style="width:100%">
+                                    <img src="@item.PictureUrl" class="img-fluid" alt="..." style="width:100%; max-height:50%; min-height:50%">
+                                    <div class="course-content" style="width:100%; max-height:40%; min-height:40%">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h4>Curso #@item.CourseID</h4>
+                                        </div>
+                                        <h3><a href="@Url.Action("SeeLessons", "Course", new {@CourseID = item.CourseID})">@item.CourseTitle</a></h3>
+                                        <p>@item.CourseDescription</p>
+                                        <div class="trainer d-flex justify-content-between align-items-center" style="width:100%; max-height:40%; min-height:40%" >
+                                            <div class="trainer-profile d-flex align-items-center">
+                                                <img src="@item.user.PictureUrl" class="img-fluid" alt="">
+                                                <span>@item.user.FirstNameUser</span>
+                                            </div>
+                                            <div class="trainer-rank d-flex align-items-center">
+                                                <i class="bx bx-user"></i>&nbsp;@item.Subscripciones
+                                                &nbsp;&nbsp;
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div> <!-- End Course Item-->
-                </div>
+                            </div> <!-- End Course Item-->
+                    }
+                    </div>
+
+                }
+                else
+                {
+                    <p>No hay cursos disponibles</p>
+                }
+
             </div>
         </section><!-- End Popular Courses Section -->
-        <!-- ======= Trainers Section ======= -->
-        <section id="trainers" class="trainers">
-
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Profesores</h2>
-                    <p>Profesores Populares</p>
-                </div>
-                <div class="row" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="member">
-                            <img src="~/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
-                            <div class="member-content">
-                                <h4>Walter White</h4>
-                                <span>Web Development</span>
-                                <p>
-                                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End Trainers Section -->
+        
 
     </main><!-- End #main -->
     <!-- ======= Footer ======= -->

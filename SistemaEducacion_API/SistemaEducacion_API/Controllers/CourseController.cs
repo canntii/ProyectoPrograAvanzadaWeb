@@ -1,8 +1,10 @@
 ﻿using Dapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SistemaEducacion_API.Entities;
 using SistemaEducacion_API.Entity;
+using SistemaEducacion_API.Services;
 using System.Data;
 using System.Data.SqlClient;
 using static Dapper.SqlMapper;
@@ -11,8 +13,10 @@ namespace SistemaEducacion_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CourseController(IConfiguration _config) : ControllerBase
+    public class CourseController(IConfiguration _config, IUtilitariosModel _utilitariosModel) : ControllerBase
     {
+        private UserController _userController;
+
         [HttpPost]
         [Route("AddCourse")]
         public IActionResult AddCourse(Course entity)
@@ -46,6 +50,7 @@ namespace SistemaEducacion_API.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         [Route("ListCourses")]
         public IActionResult ListCourses()
         {
@@ -64,6 +69,39 @@ namespace SistemaEducacion_API.Controllers
                 else
                 {
                     answer.Data = result;
+                }
+
+                return Ok(answer);
+            }
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("PopularCourses")]
+        public IActionResult PopularCourses()
+        {
+            using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                CourseAnswer answer = new CourseAnswer();
+
+                var result = db.Query<Course>("PopularCourses"
+                    , commandType: CommandType.StoredProcedure).ToList();
+
+                if (result.Count <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No hay cursos...";
+                }
+                else
+                {
+                    answer.Data = result;
+                    foreach (var item in answer.Data)
+                    {
+                        var usuario = new UserAnswer();
+                        usuario = _utilitariosModel.BuscarUsuario(item.UserId);
+
+                        item.user = usuario.Datum;
+                    }
                 }
 
                 return Ok(answer);
@@ -97,13 +135,14 @@ namespace SistemaEducacion_API.Controllers
 
         [HttpGet]
         [Route("ListMySuscriptionCourses/{UserId}")]
-        public IActionResult ListMySucriptionCourses(int UserId)
+
+        public IActionResult ListMySuscriptionCourses(int UserId)
         {
             using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
             {
                 CourseAnswer answer = new CourseAnswer();
 
-                var result = db.Query<Course>("ListMySucriptionCourses", new { UserId }
+                var result = db.Query<Course>("ListMySuscriptionCourses", new { UserId }
                     , commandType: CommandType.StoredProcedure).ToList();
 
                 if (result.Count <= 0)

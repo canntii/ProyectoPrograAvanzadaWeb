@@ -1,4 +1,5 @@
 ﻿using Azure.Storage.Blobs;
+using SistemaEducacion_API.Entity;
 
 namespace SistemaEducacion_API.Services
 {
@@ -9,5 +10,6 @@ namespace SistemaEducacion_API.Services
         string GenerateNewPassword();
         string Decrypt(string texto);
         void SendEmail(string Recipient, string Subject, string Message);
+        UserAnswer BuscarUsuario(int UserId);
     }
 }
