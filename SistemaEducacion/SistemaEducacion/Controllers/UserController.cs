@@ -79,7 +79,7 @@ namespace SistemaEducacion.Controllers
             UserAnswer answer = new UserAnswer();
 
             var resp = _userModel.AcceptOrRejectProfessor(entity);
-            if (resp?.Code == "00")
+            if (resp?.Code == "0")
                 return RedirectToAction("ViewProfessorApplicants", "User");
             else
             {

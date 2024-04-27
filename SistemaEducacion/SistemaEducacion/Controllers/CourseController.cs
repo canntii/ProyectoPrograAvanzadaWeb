@@ -8,7 +8,7 @@ namespace SistemaEducacion.Controllers
 {
 
     [ResponseCache(NoStore = true, Duration = 0)]
-    public class CourseController(IVideoModel _videoModel, ILesson _lessonModel, IUserModel _userModel, ICourse _courseModel, IHostEnvironment _environment, IFileModel _fileModel) : Controller
+    public class CourseController(IVideoModel _videoModel, ILesson _lessonModel, IUserModel _userModel, ICourse _courseModel, IHostEnvironment _environment, IFileModel _fileModel, IConfiguration _config) : Controller
     {
         [HttpGet]
         [Route("Course/SeeLessons/{CourseID}")]

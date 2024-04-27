@@ -15,5 +15,6 @@ namespace SistemaEducacion.Services
         UserAnswer? ViewProfessorApplicants();
         UserAnswer? SeeProfesorCourse(int CourseID);
         UserAnswer? SearchUser(int UserId);
+        public UserAnswer? ListProfessor();
     }
 }

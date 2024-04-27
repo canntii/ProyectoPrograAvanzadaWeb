@@ -6,7 +6,7 @@ using SistemaEducacion.WebEntities;
 
 namespace SistemaEducacion.Controllers
 {
-    public class Subscription(ISubscription _suscriptionModel, IHostEnvironment _environment) : Controller
+    public class SubscriptionController(ISubscription _suscriptionModel, IHostEnvironment _environment) : Controller
     {
         [HttpGet]
         public ActionResult Index()
@@ -20,7 +20,7 @@ namespace SistemaEducacion.Controllers
             else
             {
                 ViewBag.MsjPantalla = resp?.Message;
-                return View(new List<Subscription>());
+                return View(new List<SubscriptionController>());
             }
         }
     }

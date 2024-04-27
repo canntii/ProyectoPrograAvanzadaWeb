@@ -48,9 +48,8 @@
                 <ul>
                     <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
                     <li><a href="@Url.Action("Index", "Course")">Cursos</a></li>
-                    <li><a href="trainers.html">Profesores</a></li>
-                    <li><a href="pricing.html">Costos</a></li>
-                    <li><a href="about.html">Acerca</a></li>
+                    <li><a href="@Url.Action("ListProfessor", "User")">Profesores</a></li>
+                    <li><a href="@Url.Action("Index", "Subscription")">Subscripciones</a></li>
                     @if (login == null || login == false)
                     {
                         <li><a class="align-content-end active" href="@Url.Action("Login", "Home")">Iniciar Sesión</a></li>
@@ -103,8 +102,7 @@
                         <h4>Utilidad</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Acerca</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Suscripciones</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Terminos de Servicio</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Privacidad</a></li>
                         </ul>
