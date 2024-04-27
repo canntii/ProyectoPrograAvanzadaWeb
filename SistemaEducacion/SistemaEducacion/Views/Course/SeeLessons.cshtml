@@ -1,7 +1,14 @@
 ﻿@model List<SistemaEducacion.WebEntities.Course>
-
+@inject IHttpContextAccessor _context
+@inject IConfiguration _config
 @{
-    ViewData["Title"] = "Cursos";
+    ViewData["Title"] = "Clases";
+    string currentUrl = Context.Request.Path;
+    string[] segments = currentUrl.Split('/');
+    int courseId = int.Parse(segments[segments.Length - 1]);
+
+    var rol = _context.HttpContext.Session.GetString("RoleId");
+
 }
 
 <div id="main">
@@ -14,23 +21,45 @@
     </div><!-- End Breadcrumbs -->
     <!-- ======= Events Section ======= -->
     <section id="events" class="events">
+
+        @if (rol == _config.GetSection("roles")["Professor"])
+        {
+            <div class="row">
+                <h5 class="text-center" ><a href="@Url.Action("RegisterLesson", "Course", new {@CourseID = courseId})" class="btn-buy fw-bold fh-bold text-center">Agrega clases</a></h5>
+            </div>
+        }
+
         <div class="container" data-aos="fade-up">
-            @foreach (var item in Model)
+
+            @if (Model.Count != 0)
             {
-                <div class="row">
-                    <div class="col-md-6 d-flex align-items-stretch">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="@item.MiniPictureUrl" alt="..." width="100%">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><a href="">@item.LessonDescription</a></h5>
-                                <p>@ViewBag.Profesor</p>
+                @foreach (var item in Model)
+                {
+                    <div class="row">
+                        <div class="col-md-6 d-flex align-items-stretch">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="@item.MiniPictureUrl" alt="..." width="100%">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="@Url.Action("SeeContentLesson","Course", new{@item.LessonID})">@item.LessonDescription</a></h5>
+                                    <p>@ViewBag.Profesor</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                }
             }
+            else
+            {
+
+                <div class="row">
+                    <h3>Aún no has agregado ninguna clase</h3>
+                    <h5><a href="@Url.Action("RegisterLesson", "Course", new {@CourseID = courseId})" class="btn-buy fw-bold fh- ">Agrégalo aquí</a></h5>
+                </div>
+
+            }
+
         </div>
     </section><!-- End Events Section -->
 </div><!-- End #main -->

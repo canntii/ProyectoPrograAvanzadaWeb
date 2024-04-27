@@ -27,7 +27,7 @@ namespace SistemaEducacion_API.Controllers
                 }, commandType: CommandType.StoredProcedure);
 
                 if (result <= 0)
-                {
+                { 
                     answer.Code = "-1";
                     answer.Message = "Ha ocurrido un error que imposibilita registrar la lección..";
                 }
@@ -62,6 +62,56 @@ namespace SistemaEducacion_API.Controllers
                 }
 
                 return Ok(answer) ;
+            }
+        }
+
+        [HttpGet]
+        [Route("LastInsert/{CourseID}")]
+        public IActionResult LastInsert(int CourseID)
+        {
+            using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                LessonAnswer answer = new LessonAnswer();
+
+                var result = db.Query<Lesson>("LastInsert", new
+                { CourseID }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+
+                if (result == null)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No existen lecciones asociadas aún";
+                }
+                else
+                {
+                    
+                    answer.Datum = result;
+                }
+
+                return Ok(answer);
+            }
+        }
+
+        [HttpGet]
+        [Route("SeeContentLesson/{LessonID}")]
+        public IActionResult SeeContentLesson(int LessonID)
+        {
+            using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                LessonAnswer answer = new LessonAnswer();
+
+                var result = db.Query<Lesson>("SeeContentLesson", new
+                { LessonID }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+
+                if (result == null)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No existen lecciones asociadas aún";
+                }
+                else
+                {
+                    answer.Datum = result;
+                }
+                return Ok(answer);
             }
         }
 

@@ -14,6 +14,7 @@
         public string? VideoUrl { get; set; }
         public string? MiniPictureUrl { get; set; }
         public int UserId { get; set; }
+        public int LessonID { get; set; }
     }
 
     public class CourseAnswer

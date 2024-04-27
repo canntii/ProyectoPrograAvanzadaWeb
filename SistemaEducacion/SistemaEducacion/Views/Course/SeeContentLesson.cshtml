@@ -1,0 +1,28 @@
+﻿@model SistemaEducacion.WebEntities.Lesson
+
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs mt-0" data-aos="fade-in">
+        <div class="container">
+            <h2>Contenido</h2>
+            <p> Cada clase contiene un video </p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Cource Details Section ======= -->
+    <section id="course-details" class="course-details">
+        <div class="container" data-aos="fade-up">
+                <div class="col-lg-8">
+                    <video controls class="img-fluid" width="100%" type="video/mp4">
+                        <source src="@Model.VideoUrl" type="video/mp4" />
+                    </video>
+                    <h3>@Model.LessonTitle</h3>
+                    <p>
+                        @Model.LessonDescription
+                    </p>
+                </div>
+        </div>
+    </section><!-- End Cource Details Section -->
+
+</main><!-- End #main -->
