@@ -9,6 +9,7 @@ namespace SistemaEducacion.Services
         CourseAnswer? ListMyCourses(int UserId);
         CourseAnswer? ListMySucriptionCourses(int UserId);
         CourseAnswer? SeeLessonCourse(int CourseID);
+        CourseAnswer? PopularCourses();
     }
 }
  

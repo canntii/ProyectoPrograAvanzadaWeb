@@ -26,7 +26,7 @@
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <h4>Curso #@item.CourseID</h4>
                                 </div>
-                                <h3><a href="course-details.html">@item.CourseTitle</a></h3>
+                                <h3><a href="@Url.Action("SeeLessons", "Course", new {@CourseID = item.CourseID})">@item.CourseTitle</a></h3>
                                 <p>@item.CourseDescription</p>
                             </div>
                         </div>

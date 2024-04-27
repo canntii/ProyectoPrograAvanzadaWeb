@@ -14,6 +14,8 @@
         public string? VideoUrl { get; set; }
         public string? MiniPictureUrl { get; set; }
         public int UserId { get; set; }
+        public int Subscripciones { get; set; }
+        public virtual User user { get; set; }
     }
 
     public class CourseAnswer

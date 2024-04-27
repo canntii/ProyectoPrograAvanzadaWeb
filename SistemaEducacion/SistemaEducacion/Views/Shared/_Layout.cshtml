@@ -1,7 +1,10 @@
 ﻿@inject IHttpContextAccessor _context
+@inject IConfiguration _config
 @{
     string? firstNameUser = _context.HttpContext.Session.GetString("FirstNameUser");
     bool? login = Convert.ToBoolean(_context.HttpContext.Session.GetString("Login"));
+    var rol = _context.HttpContext.Session.GetString("RoleId");
+
 }
 
 <!DOCTYPE html>
@@ -48,7 +51,12 @@
                 <ul>
                     <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
                     <li><a href="@Url.Action("Index", "Course")">Cursos</a></li>
-                    <li><a href="@Url.Action("ListProfessor", "User")">Profesores</a></li>
+                    @if (rol == _config.GetSection("roles")["Admin"])
+                    {
+                        <li><a href="@Url.Action("ViewProfessorApplicants", "User")">Profesores</a></li>
+                    }else{
+                        <li><a href="@Url.Action("ListProfessor", "User")">Profesores</a></li>
+                    }
                     <li><a href="@Url.Action("Index", "Subscription")">Subscripciones</a></li>
                     @if (login == null || login == false)
                     {

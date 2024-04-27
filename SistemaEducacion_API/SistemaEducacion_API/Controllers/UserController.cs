@@ -43,6 +43,32 @@ namespace SistemaEducacion_API.Controllers
             }
         }
 
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("PopularProfessors")]
+        public IActionResult PopularProfessors()
+        {
+            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                UserAnswer answer = new UserAnswer();
+
+                var result = db.Query<User>("PopularProfessors",
+                    commandType: CommandType.StoredProcedure).ToList();
+
+                if (result == null)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "Sus datos no son correctos";
+                }
+                else
+                {
+                    answer.Data = result;
+                }
+
+                return Ok(answer);
+            }
+        }
+
 
         [AllowAnonymous]
         [HttpPost]
@@ -259,6 +285,8 @@ namespace SistemaEducacion_API.Controllers
                 return Ok(answer);
             }
         }
+
+
 
         [AllowAnonymous]
         [HttpPut]
