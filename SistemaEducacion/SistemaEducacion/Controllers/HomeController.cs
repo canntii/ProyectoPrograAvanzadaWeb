@@ -17,7 +17,7 @@ namespace SistemaEducacion.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost]  
         public IActionResult Login(User entity) 
         {
             entity.PasswordUser = _utilitariosModel.Encrypt(entity.PasswordUser!);
@@ -27,6 +27,8 @@ namespace SistemaEducacion.Controllers
             {
                 HttpContext.Session.SetString("EmailUser", resp?.Datum?.EmailUser!);
                 HttpContext.Session.SetString("FirstNameUser", resp?.Datum?.FirstNameUser!);
+                HttpContext.Session.SetString("RoleId", resp?.Datum?.RoleID!.ToString());
+                HttpContext.Session.SetString("UserId", resp?.Datum?.UserId!.ToString());
                 HttpContext.Session.SetString("Token", resp?.Datum?.Token!);
 
                 if ((bool)(resp?.Datum?.Temporary!))
@@ -34,7 +36,7 @@ namespace SistemaEducacion.Controllers
                 else
                 {
                     HttpContext.Session.SetString("Login", "true");
-                    return RedirectToAction("BecomeProfessor", "User");
+                    return RedirectToAction("Index", "Home");
                 }
             }
             else

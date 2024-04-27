@@ -6,6 +6,8 @@ namespace SistemaEducacion.Services
     {
         Answer? AddCourse(Course entity);
         CourseAnswer? ListCourses();
+        CourseAnswer? ListMyCourses(int UserId);
+        CourseAnswer? ListMySucriptionCourses(int UserId);
         CourseAnswer? SeeLessonCourse(int CourseID);
     }
 }

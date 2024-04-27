@@ -22,6 +22,7 @@ namespace SistemaEducacion_API.Controllers
                 Answer answer = new Answer();
                 var result = db.Execute("RegisterCourse", new
                 {
+                    entity.UserId,
                     entity.CourseTitle,
                     entity.CourseDescription,
                     entity.StartDate,
@@ -53,6 +54,56 @@ namespace SistemaEducacion_API.Controllers
                 CourseAnswer answer = new CourseAnswer();
 
                 var result = db.Query<Course>("ListCourses"
+                    , commandType: CommandType.StoredProcedure).ToList();
+
+                if (result.Count <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No hay cursos...";
+                }
+                else
+                {
+                    answer.Data = result;
+                }
+
+                return Ok(answer);
+            }
+        }
+
+        [HttpGet]
+        [Route("ListMyCourses/{UserId}")]
+        public IActionResult ListMyCourses(int UserId)
+        {
+            using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                CourseAnswer answer = new CourseAnswer();
+
+                var result = db.Query<Course>("ListMyCourses", new {UserId}
+                    , commandType: CommandType.StoredProcedure).ToList();
+
+                if (result.Count <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No hay cursos...";
+                }
+                else
+                {
+                    answer.Data = result;
+                }
+
+                return Ok(answer);
+            }
+        }
+
+        [HttpGet]
+        [Route("ListMySucriptionCourses/{UserId}")]
+        public IActionResult ListMySucriptionCourses(int UserId)
+        {
+            using (var db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                CourseAnswer answer = new CourseAnswer();
+
+                var result = db.Query<Course>("ListMySucriptionCourses", new { UserId }
                     , commandType: CommandType.StoredProcedure).ToList();
 
                 if (result.Count <= 0)

@@ -8,7 +8,7 @@
         public string? EmailUser { get; set; }
         public string? PasswordUser { get; set; }
         public int? RoleID { get; set; }
-        public string? RoleName { get; set; }
+        public string? NameRole { get; set; }
         public int? SubscriptionID { get; set; }
         public string? SubscriptionType { get; set; }
         public string? TemporalPassword {  get; set; }

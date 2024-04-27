@@ -7,7 +7,7 @@ using SistemaEducacion.WebEntities;
 
 namespace SistemaEducacion.Controllers
 {
-    public class UserController(IUserModel _userModel, IHostEnvironment _environment, IFileModel _fileModel) : Controller
+    public class UserController(IUserModel _userModel, IHostEnvironment _environment, IFileModel _fileModel, IUtilitariosModel _utilitariosModel) : Controller
     {
         [HttpGet]
         public IActionResult BecomeProfessor()
@@ -32,8 +32,8 @@ namespace SistemaEducacion.Controllers
             entity.PictureUrl = image.Blob.Uri;
 
             var resp = _userModel.BecomeProfessor(entity);
-            if (resp?.Code == "00")
-                return RedirectToAction("Index", "Course");
+            if (resp?.Code == "0")
+                return RedirectToAction("MyAccount", "User");
             else
             {
                 ViewBag.MsjScreen = resp?.Message;
@@ -71,5 +71,57 @@ namespace SistemaEducacion.Controllers
                 return View();
             }
         }
+
+        [HttpGet]
+        public IActionResult MyAccount()
+        {
+            var id = Convert.ToInt32(HttpContext.Session.GetString("UserId"));
+            ViewBag.id = id;
+            var resp = _userModel.SearchUser(id);
+            return View(resp.Datum);
+        }
+
+        [HttpPost]
+        public IActionResult Login(string EmailUser, string PasswordUser)
+        {
+            var entity = new User
+            {
+                EmailUser = EmailUser,
+                PasswordUser = PasswordUser
+            };
+
+            entity.PasswordUser = _utilitariosModel.Encrypt(entity.PasswordUser!);
+            var resp = _userModel.Login(entity);
+
+            return Json(resp);
+
+        }
+
+        [HttpGet]
+        public IActionResult UpdateUser()
+        {
+            var id = Convert.ToInt32(HttpContext.Session.GetString("UserId"));
+            var resp = _userModel.SearchUser(id);
+            resp.Datum.PasswordUser = _utilitariosModel.Decrypt(resp.Datum.PasswordUser!);
+            return View(resp.Datum);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateUser(User entity)
+        {
+            var id = Convert.ToInt32(HttpContext.Session.GetString("UserId"));
+            entity.UserId = id;
+            entity.PasswordUser = _utilitariosModel.Encrypt(entity.PasswordUser!);
+            var resp = _userModel.UpdateUser(entity);
+
+            if (resp?.Code == "00")
+                return RedirectToAction("MyAccount", "User");
+            else
+            {
+                ViewBag.MsjScreen = resp?.Message;
+                return View();
+            }
+        }
+
     }
 }

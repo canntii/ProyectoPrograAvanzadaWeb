@@ -10,7 +10,7 @@ namespace SistemaEducacion_API.Entity
         public string? EmailUser { get; set; }
         public string? PasswordUser { get; set; }
         public int? RoleID { get; set; }
-        public string? RoleName { get; set; }
+        public string? NameRole { get; set; }
         public bool? Estado { get; set; }
         public string? Token { get; set; }
         public bool Temporary { get; set; }

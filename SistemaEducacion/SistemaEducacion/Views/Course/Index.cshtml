@@ -1,10 +1,9 @@
-﻿@model List<SistemaEducacion.WebEntities.Course>
+﻿@using SistemaEducacion.WebEntities
+@model IEnumerable<Course>
 
 @{
     ViewData["Title"] = "Cursos";
 }
-
-
 
 <main id="main" data-aos="fade-in">
 
@@ -12,7 +11,6 @@
     <div class="breadcrumbs">
         <div class="container">
             <h2>Cursos Disponibles</h2>
-            <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
         </div>
     </div><!-- End Breadcrumbs -->
     <!-- ======= Courses Section ======= -->
@@ -22,13 +20,12 @@
             <div class="row" data-aos="zoom-in" data-aos-delay="100">
                 @foreach (var item in Model)
                 {
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                        <div class="course-item">
-                            <video src="@item.PictureUrl" class="img-fluid" alt="..." type="video/mp4">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 mb-3" >
+                        <div class="course-item" style="width:100%">
+                            <img src="@item.PictureUrl" class="img-fluid" alt="..."  style="width:100%; max-height:60%; min-height:60%">
                             <div class="course-content">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <h4>Curso #@item.CourseID</h4>
-                                    <p class="price">$250</p>
                                 </div>
 
                                 <h3><a href="course-details.html">@item.CourseTitle</a></h3>

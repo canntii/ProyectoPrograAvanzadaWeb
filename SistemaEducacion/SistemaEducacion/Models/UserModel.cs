@@ -20,6 +20,18 @@ namespace SistemaEducacion.Models
             return null;
         }
 
+        public Answer? UpdateUser(User entity)
+        {
+
+            string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/User/UpdateUser";
+            JsonContent body = JsonContent.Create(entity);
+            var resp = _httpClient.PutAsync(url, body).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<Answer>().Result;
+            return null;
+        }
+
         public UserAnswer? Login(User entity)
         {
             string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/User/Login";
@@ -115,5 +127,21 @@ namespace SistemaEducacion.Models
             return null;
         }
 
+        public UserAnswer? SearchUser(int UserId)
+        {
+            string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/User/SearchUser/" + UserId;
+
+            string token = _context.HttpContext?.Session.GetString("Token")!;
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            var resp = _httpClient.GetAsync(url).Result;
+
+            if (resp.IsSuccessStatusCode)
+            {
+                return resp.Content.ReadFromJsonAsync<UserAnswer>().Result;
+            }
+
+            return null;
+        }
     }
 }

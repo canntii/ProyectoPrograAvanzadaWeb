@@ -13,6 +13,7 @@
         public string? LessonDescription { get; set; }
         public string? VideoUrl { get; set; }
         public string? MiniPictureUrl { get; set; }
+        public int UserId { get; set; }
     }
 
     public class CourseAnswer

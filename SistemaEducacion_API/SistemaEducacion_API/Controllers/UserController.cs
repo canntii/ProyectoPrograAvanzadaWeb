@@ -235,6 +235,52 @@ namespace SistemaEducacion_API.Controllers
                 return Ok(answer);
             }
         }
+        [HttpGet]
+        [Route("SearchUser/{UserId}")]
+        public IActionResult SearchUser(int UserId)
+        {
+            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                UserAnswer answer = new UserAnswer();
+
+                var result = db.Query<User>("SearchUser", new { UserId }
+                    , commandType: CommandType.StoredProcedure).FirstOrDefault();
+
+                if (result == null)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No se encontro el usuario...";
+                }
+                else
+                {
+                    answer.Datum = result;
+                }
+
+                return Ok(answer);
+            }
+        }
+
+        [AllowAnonymous]
+        [HttpPut]
+        [Route("UpdateUser")]
+        public IActionResult UpdateUser(User entity)
+        {
+            using (var db = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                Answer answer = new Answer();
+
+                var result = db.Execute("UpdateUser",
+                    new { entity.UserID ,entity.FirstNameUser, entity.LastNameUser, entity.EmailUser, entity.PasswordUser },
+                    commandType: CommandType.StoredProcedure);
+
+                if (result <= 0)
+                {
+                    answer.Code = "-1";
+                    answer.Message = "No se pudo realizar la actualizacion";
+                }
+                return Ok(answer);
+            }
+        }
 
     }
 }

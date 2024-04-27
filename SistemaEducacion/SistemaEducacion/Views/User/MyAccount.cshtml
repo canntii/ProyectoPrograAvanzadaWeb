@@ -1,0 +1,179 @@
+﻿@using SistemaEducacion.Services
+@inject IUtilitariosModel _helper
+@inject IHttpContextAccessor _context
+
+@using SistemaEducacion.WebEntities
+
+@model User
+@{
+    var id = _context.HttpContext.Session.GetString("UserId");
+}
+<div class="container mt-4" style="height:100%;min-height:100%">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="account-settings-tab" data-bs-toggle="list" href="#account-settings" role="tab" aria-controls="account-settings">Ajustes de la Cuenta</a>
+                <a class="list-group-item list-group-item-action" id="security-tab" data-bs-toggle="list" href="#security" role="tab" aria-controls="security">Modo Profesor</a>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="account-settings" role="tabpanel" aria-labelledby="account-settings-tab">
+                    <div class="row">
+                        <div class="section-title">
+                            <div class="row">
+                                <div class="d-flex">
+                                    <p>Información de la Cuenta</p>
+
+                                    <button type="button" class="update-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        Actualizar Datos
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <p><strong>ID:</strong> @_helper.Encrypt(id)</p>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            @Html.TextBoxFor(m => m.FirstNameUser, new
+                                {
+                                    @class = "form-control",
+                                    placeholder = "Nombre",
+                                    @type = "Text",
+                                    @required = "true",
+                                    @style = "height: 76px; font-size: 16px",
+                                    @readonly = "TRUE"
+
+                                })
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            @Html.TextBoxFor(m => m.LastNameUser, new
+                                {
+                                    @class = "form-control",
+                                    @placeholder = "Apellidos",
+                                    @type = "Text",
+                                    @required = "true",
+                                    @style = "height: 76px; font-size: 16px",
+                                    @readonly = "TRUE"
+                                })
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        @Html.TextBoxFor(m => m.EmailUser, new
+                            {
+                                @class = "form-control",
+                                placeholder = "Correo",
+                                @type = "text",
+                                @required = "true",
+                                @style = "height: 76px; font-size: 16px",
+                                @readonly = "TRUE"
+                            })
+                    </div>
+
+                    <div class="form-group mt-3">
+                        @Html.TextBoxFor(m => m.PasswordUser, new
+                            {
+                                @class = "form-control",
+                                placeholder = "********************",
+                                @type = "password",
+                                @required = "true",
+                                @style = "height: 76px; font-size: 16px",
+                                @readonly = "TRUE"
+                            })
+                    </div>
+
+                    <div class="form-group mt-3">
+                        @Html.TextBoxFor(m => m.NameRole, new
+                            {
+                                @class = "form-control",
+                                placeholder = "Estado",
+                                @type = "text",
+                                @required = "true",
+                                @style = "height: 76px; font-size: 16px",
+                                @readonly = "TRUE"
+                            })
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+                    <div class="section-title">
+                        <p>Modo Profesor</p>
+                    </div>
+                    <p>Conviértete en profesor en nuestra plataforma y comparte tu experiencia con estudiantes de todo el mundo. 
+                        El modo profesor te brinda acceso a una gran cantidad de opciones que te permitiran gestionar tus propios cursos. 
+                        Imparte Conocimientos en tus áreas de especializacion, interactua con tus alumnos y deja tu marca en este ámbito.
+                    </p>
+                    <a href="@Url.Action("BecomeProfessor", "User")" class="becomeProfessor-btn">Habilitar Modo Profesor</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Validar Contraseña</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Ingrese su contraseña para poder modificar sus datos</p>
+                <div class="form-group mt-3">
+                    <input class="form-control" type="password" style="height: 56px; font-size: 16px" name="passwd" id="passwd" />
+                </div>
+
+                <div id="Error">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="validarPasswd()">Validar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function validarPasswd() {
+        var email = $('#EmailUser').val();
+        var passwd = $('#passwd').val();
+
+        if (passwd.trim() === '') {
+            $('#Error').text("Debe ingresar una contraseña para continuar...").addClass("text-danger text-center");
+        } else {
+            validaCredenciales(email, passwd);
+        }
+    }
+
+    function validaCredenciales(email, passwd) {
+
+
+        var entity = {
+            EmailUser: email,
+            PasswordUser: passwd
+        };
+
+        $.ajax({
+            url: '@Url.Action("Login", "User")',
+            type: 'POST',
+            data: { EmailUser: email, PasswordUser: passwd },
+            success: function (resp) {
+                console.log(resp);
+                var codigo = resp.code;
+                if (codigo === "00") {
+                    window.location.href = "@Url.Action("UpdateUser", "User")";
+                } else {
+                    $('#Error').text("Contraseña invalida..").addClass("text-danger text-center");
+                }
+            }
+        })
+
+    }
+
+</script>

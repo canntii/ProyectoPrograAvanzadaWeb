@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaEducacion.Services;
 using SistemaEducacion.WebEntities;
+using System.Security.Permissions;
 
 namespace SistemaEducacion.Controllers
 {
 
     [ResponseCache(NoStore = true, Duration = 0)]
-    public class CourseController(IUserModel _userModel, ICourse _courseModel, IHostEnvironment _environment, IFileModel _fileModel) : Controller
+    public class CourseController(IUserModel _userModel, ICourse _courseModel, IHostEnvironment _environment, IFileModel _fileModel, IConfiguration _config) : Controller
     {
 
 
@@ -16,10 +17,8 @@ namespace SistemaEducacion.Controllers
         {
             var resp = _courseModel.SeeLessonCourse(CourseID);
             var prof = _userModel.SeeProfesorCourse(CourseID);
-            string profesor = prof.Datum.FirstNameUser + " " + prof.Datum.LastNameUser;
             if (resp?.Code == "00")
             {
-                ViewBag.Profesor = profesor;
                 return View(resp!.Data);
             }
             else
@@ -35,6 +34,34 @@ namespace SistemaEducacion.Controllers
             var resp = _courseModel.ListCourses();
 
             if(resp?.Code == "00")
+            {
+                return View(resp!.Data);
+            }
+            else
+            {
+                ViewBag.MsjPantalla = resp?.Message;
+                return View(new List<Course>());
+            }
+        }
+
+        [HttpGet]
+        public IActionResult MyCourses()
+        {
+            var roles = _config.GetSection("roles");
+            var RoleId = HttpContext.Session.GetString("RoleId");
+            var UserId = Convert.ToInt32(HttpContext.Session.GetString("UserId"));
+            if(RoleId == roles["Professor"])
+            {
+                var misCursos = _courseModel.ListMyCourses(UserId);
+
+                if(misCursos?.Code == "00")
+                {
+                    ViewBag.Miscursos = misCursos!.Data;
+                }
+            }
+            var resp = _courseModel.ListMySucriptionCourses(UserId);
+
+            if (resp?.Code == "00")
             {
                 return View(resp!.Data);
             }
@@ -66,10 +93,10 @@ namespace SistemaEducacion.Controllers
             }
 
             entity.PictureUrl = image.Blob.Uri;
-
+            entity.UserId = Convert.ToInt32(HttpContext.Session.GetString("UserId"));
             var resp = _courseModel.AddCourse(entity);
-            if(resp?.Code == "00")
-                return RedirectToAction("Index", "Course");
+            if(resp?.Code == "1")
+                return RedirectToAction("MyCourses", "Course");
             else
             {
                 ViewBag.MsjScreen = resp?.Message;

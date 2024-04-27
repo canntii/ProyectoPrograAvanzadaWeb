@@ -4,26 +4,67 @@
     ViewData["Title"] = "BecomeProfessor";
 }
 
-<h1>Quieres hacerte profesor?</h1>
+<div id="main">
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        @using (Html.BeginForm("BecomeProfessor", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
-        {
-            <div>
-                @Html.LabelFor(model => model.PictureUploads)
-                @Html.TextBoxFor(model => model.PictureUploads, new { @class = "form-control", @placeholder = "Sube tu foto", @type = "file", @required = "true" })
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs mt-0" data-aos="fade-in">
+        <div class="container">
+            <h2>Modo Profesor</h2>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact pt-0">
+        <div data-aos="fade-up" style="position: relative; z-index: -2;">
+            <img style="border:0; width: 100%; height: 350px;" src="https://cantiedu.blob.core.windows.net/videos-container/Fondo.jpg?sp=r&st=2024-04-27T04:54:40Z&se=2024-04-27T12:54:40Z&spr=https&sv=2022-11-02&sr=b&sig=kjkhkrtlRziYn8fXUKNU%2BDWbdI%2B%2F%2B6sm4hIEYc9iWtU%3D" frameborder="0" allowfullscreen></img>
+        </div>
+
+        <div class="container shadow" data-aos="fade-up mt-4" style="
+        position: relative;
+        z-index: 2;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: -150px;
+    ">
+            <div class="col-lg-12 mt-5 mt-lg-0 p-4">
+                <h2 class="pt-4 text-center">Habilitar Modo</h2>
+                <!--cLASS php-email-form-->
+                @using (Html.BeginForm("BecomeProfessor", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <p>Como último paso para habilitar el modo profesor requerimos que adjuntes una imagen para tu perfil de profesor. 
+                        Ten en cuenta que no podra ser modifica..</p>
+                    <p  class="text-center">Al presionar habilitar, tu cuenta será validada para convertirte en profesor, suerte!</p>
+                    <div class="form-group mt-3">
+                        @Html.TextBoxFor(m => m.PictureUploads, new
+                            {
+                                @class = "form-control form-control-lg ",
+                                placeholder = "Clase",
+                                @type = "file",
+                                @required = "true",
+                                @style = "font-size: 16px"
+                            })
+                    </div>
+
+
+                    <div class="text-center mt-5"><button type="submit" class="agregarButton">Habilitar</button></div>
+
+                    @if (ViewBag.MsjPantalla != null)
+                    {
+                        <div class="alert alert-warning" role="alert" style="text-align:center">
+                            @ViewBag.MsjScreen
+                        </div>
+                    }
+                }
+
+                </>
+
             </div>
-            <button type="submit">Subir</button>
-        }
-    </div>
-</div>
 
+        </div>
+    </section><!-- End Contact Section -->
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</div><!-- End #main -->
+
 
 @section Scripts {
     @{
