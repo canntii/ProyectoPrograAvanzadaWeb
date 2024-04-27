@@ -1,6 +1,6 @@
 ﻿namespace SistemaEducacion_API.Entities
 {
-    public class Suscription
+    public class Subscription
     {
         public long SubscriptionID { get; set; }
         public string? SubscriptionType { get; set; }
@@ -8,10 +8,10 @@
         public bool? Estado { get; set; }
     }
 
-    public class SuscriptionAnswer
+    public class SubscriptionAnswer
     {
-        public Suscription? info { get; set; }
-        public List<Suscription>? data { get; set; }
+        public Subscription? info { get; set; }
+        public List<Subscription>? data { get; set; }
 
         public string?  Code { get; set; }
         public string? Message { get; set; }

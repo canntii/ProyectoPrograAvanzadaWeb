@@ -1,4 +1,5 @@
-﻿using SistemaEducacion.WebEntities;
+﻿using Microsoft.AspNetCore.Mvc;
+using SistemaEducacion.WebEntities;
 
 namespace SistemaEducacion.Services
 {
@@ -14,6 +15,5 @@ namespace SistemaEducacion.Services
         UserAnswer? ViewProfessorApplicants();
         UserAnswer? SeeProfesorCourse(int CourseID);
         UserAnswer? SearchUser(int UserId);
-
     }
 }

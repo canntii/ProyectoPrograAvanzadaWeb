@@ -130,7 +130,6 @@ namespace SistemaEducacion.Models
         public UserAnswer? SearchUser(int UserId)
         {
             string url = _configuration.GetSection("settings:UrlWebApi").Value + "api/User/SearchUser/" + UserId;
-
             string token = _context.HttpContext?.Session.GetString("Token")!;
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 

@@ -22,6 +22,11 @@
 
     public class UserAnswer
     {
+        public UserAnswer()
+        {
+            Code = "00";
+            Message = string.Empty;
+        }
         public string? Code { get; set; }
         public string? Message { get; set; }
         public User? Datum { get; set; }

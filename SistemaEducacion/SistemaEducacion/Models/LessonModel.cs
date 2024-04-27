@@ -7,7 +7,7 @@ namespace SistemaEducacion.Models
     {
         public Answer? AddLesson(Lesson entity)
         {
-            string url = _config.GetSection("settings:UrlWebApi").Value + "api/Lesson/AddLesson";
+            string url = _config.GetSection("settings:UrlWebApi").Value + "api/Lesson/RegisterLesson";
             JsonContent body = JsonContent.Create(entity);
             var resp = _httpClient.PostAsync(url, body).Result;
 
