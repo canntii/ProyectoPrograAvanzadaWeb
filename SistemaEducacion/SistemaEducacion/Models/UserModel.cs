@@ -43,7 +43,7 @@ namespace SistemaEducacion.Models
                 return resp.Content.ReadFromJsonAsync<UserAnswer>().Result;
             }
 
-            return null;
+            return resp.Content.ReadFromJsonAsync<UserAnswer>().Result; ;
         }
 
         public UserAnswer? PopularProfessors()

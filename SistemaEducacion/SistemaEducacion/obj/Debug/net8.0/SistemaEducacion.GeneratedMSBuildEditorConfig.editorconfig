@@ -17,55 +17,115 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SistemaEducacion
 build_property.RootNamespace = SistemaEducacion
-build_property.ProjectDir = C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\
+build_property.ProjectDir = E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion
+build_property.MSBuildProjectDirectory = E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/bryan/OneDrive/Documentos/GitHub/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/ChangePassword.cshtml]
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Course/AddCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEFkZENvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Course/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Course/MyCourses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXE15Q291cnNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Course/RegisterLesson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXFJlZ2lzdGVyTGVzc29uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Course/SeeContentLesson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXFNlZUNvbnRlbnRMZXNzb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Course/SeeLessons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXFNlZUxlc3NvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bryan/OneDrive/Documentos/GitHub/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/Index.cshtml]
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bryan/OneDrive/Documentos/GitHub/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/Login.cshtml]
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bryan/OneDrive/Documentos/GitHub/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/Privacy.cshtml]
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bryan/OneDrive/Documentos/GitHub/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/RecoverAccess.cshtml]
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/RecoverAccess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWNvdmVyQWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bryan/OneDrive/Documentos/GitHub/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/RegisterUser.cshtml]
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Home/RegisterUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RlclVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bryan/OneDrive/Documentos/GitHub/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Shared/Error.cshtml]
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bryan/OneDrive/Documentos/GitHub/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bryan/OneDrive/Documentos/GitHub/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/_ViewImports.cshtml]
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Subscription/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vic2NyaXB0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Subscription/Subscribe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vic2NyaXB0aW9uXFN1YnNjcmliZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/User/BecomeProfessor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCZWNvbWVQcm9mZXNzb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/User/ListProfessor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMaXN0UHJvZmVzc29yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/User/MyAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxNeUFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/User/UpdateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGRhdGVVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/User/ViewProfessorApplicants.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxWaWV3UHJvZmVzc29yQXBwbGljYW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Video/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Video/UploadVideo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9cVXBsb2FkVmlkZW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bryan/OneDrive/Documentos/GitHub/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/_ViewStart.cshtml]
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bryan/OneDrive/Documentos/GitHub/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Shared/_Layout.cshtml]
+[E:/GITHUB/ProyectoPrograAvanzadaWeb/SistemaEducacion/SistemaEducacion/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8wlcmud5bq

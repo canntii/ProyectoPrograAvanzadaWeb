@@ -288,7 +288,6 @@ E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\
 E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\net8.0\scopedcss\bundle\SistemaEducacion.styles.css
 E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\net8.0\scopedcss\projectbundle\SistemaEducacion.bundle.scp.css
-E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\net8.0\SistemaEducacion.csproj.CopyComplete
 E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\net8.0\SistemaEducacion.dll
 E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\net8.0\refint\SistemaEducacion.dll
 E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\net8.0\SistemaEducacion.pdb
@@ -590,3 +589,7 @@ C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEduca
 C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\net8.0\SistemaEducacion.pdb
 C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\net8.0\SistemaEducacion.genruntimeconfig.cache
 C:\Users\bryan\OneDrive\Documentos\GitHub\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\net8.0\ref\SistemaEducacion.dll
+E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\bin\Debug\net8.0\Azure.Storage.Common.dll
+E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\bin\Debug\net8.0\System.IO.Hashing.dll
+E:\GITHUB\ProyectoPrograAvanzadaWeb\SistemaEducacion\SistemaEducacion\obj\Debug\net8.0\SistemaE.E1CA9774.Up2Date

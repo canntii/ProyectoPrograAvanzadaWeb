@@ -24,7 +24,6 @@ namespace SistemaEducacion.Controllers
         [Route("Video/UploadVideo/{LessonID}")]
         public IActionResult UploadVideo()
         {
-            HttpContext.Session.Clear();
             return View();
         }
 

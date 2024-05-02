@@ -140,7 +140,10 @@ namespace SistemaEducacion_API.Controllers
                 bool Temporary = false;
 
                 var result = db.Query<User>("ChangePassword",
-                    new { entity.EmailUser, entity.PasswordUser, entity.TemporalPassword, Temporary },
+                    new { EmailUser = entity.EmailUser, 
+                        PasswordUser = entity.PasswordUser, 
+                        TemporalPassword = entity.TemporalPassword, 
+                        Temporary = Temporary },
                     commandType: CommandType.StoredProcedure).FirstOrDefault();
 
                 if (result == null)

@@ -3036,8 +3036,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché E:\\GITHUB\\ProyectoPrograAvanzadaWeb\\SistemaEducacion_API\\SistemaEducacion_API\\obj\\project.nuget.cache : El valor no puede ser nulo.\r\nNombre del parámetro: value"
+    }
+  ]
 }
